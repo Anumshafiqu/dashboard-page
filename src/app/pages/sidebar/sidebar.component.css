@@ -1,0 +1,33 @@
+/* .sidebar-content {
+    height: 100vh;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    } */
+
+    .side-links{
+        font-family:'Franklin Gothic Medium', ;
+        /* color: gray; */
+        padding: 10px;
+    }
+    .side-links-1{
+        font-size: 13px;
+        color: black;
+    }
+
+
+    /* Custom sidebar styling */
+.custom-sidebar {
+    border-radius: 1rem !important; /* 16px radius */
+    overflow: hidden !important;
+  }
+  
+  /* Optional: also round the internal content */
+  ::ng-deep .p-sidebar {
+    border-radius: 10px !important;
+  }
+  
+  /* Optional: if you have a backdrop/modal, apply transparency */
+  ::ng-deep .p-sidebar-mask {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+  }
+  
