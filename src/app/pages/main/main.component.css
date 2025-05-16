@@ -1,0 +1,38 @@
+.layout {
+    display: flex;
+    height: 100vh;
+    transition: all 0.3s ease;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 18rem; /* 288px */
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar-hidden {
+    width: 0;
+    overflow: hidden;
+  }
+  
+  /* Main content */
+  .main-content {
+    flex-grow: 1;
+    padding: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  .sidebar {
+    width: 18rem;
+    transition: width 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .sidebar-hidden {
+    width: 0;
+    overflow: hidden;
+  }
+    

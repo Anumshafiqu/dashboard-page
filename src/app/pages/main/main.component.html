@@ -12,19 +12,66 @@
       </div>
    </div> -->
 
+<!-- <app-header (toggleSidebar)="toggleSidebar()"></app-header>
 
-   <app-header></app-header>
 
-<div class="flex">
-  <!-- Sidebar -->
+
+   <div class="flex">
+      <div class="w-18rem hidden lg:block" [class.hidden]="!isSidebarVisible">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="flex-1 p-3 transition-all duration-300" [class.w-full]="!isSidebarVisible">
+        <app-home></app-home>
+      </div>
+    </div>  -->
+
+<!-- <div class="flex">
   <div class="w-18rem">
     <app-sidebar></app-sidebar>
   </div>
-
-  <!-- Main Content -->
   <div class="flex-1 p-3 ml-3">
+    <app-home></app-home>
+  </div>
+</div> -->
+
+   
+<!-- 
+<app-header (toggleSidebar)="toggleSidebar()"></app-header>
+
+<div class="layout">
+  <div class="sidebar" [class.sidebar-hidden]="!isSidebarVisible">
+   <app-sidebar></app-sidebar>
+ </div>
+  <div class="main-content" [class.full-width]="!isSidebarVisible">
+    <app-home></app-home>
+  </div>
+</div> -->
+
+
+<app-header (toggleSidebar)="toggleSidebar()"></app-header>
+
+<div style="display: flex; height: 100vh;">
+  <!-- Sidebar -->
+  <div
+    [style.width]="isSidebarVisible ? '18rem' : '0'"
+    style=" overflow: hidden; transition: width 0.3s ease;"
+  >
+    <p *ngIf="isSidebarVisible" style="padding: 1rem;"><app-sidebar></app-sidebar></p>
+  </div>
+
+  <!-- Main content -->
+  <div
+    [style.width]="isSidebarVisible ? 'calc(100% - 18rem)' : '100%'"
+    style="padding: 1rem; transition: width 0.3s ease;"
+  >
     <app-home></app-home>
   </div>
 </div>
 
-   
+
+
+
+
+
+
+
