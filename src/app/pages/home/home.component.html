@@ -1,6 +1,6 @@
  <div class="col-12 lg:col-9">
 
-<div class="grid mt-5 row">
+< <div class="grid mt-4 row">
   <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-11 mt-2" *ngFor="let card of cards">
     <p-card class="shadow-sm">
       <div class="flex justify-content-between align-items-center">
@@ -15,7 +15,8 @@
       </div>
     </p-card>
   </div>
-</div> 
+</div>  
+
 
 
 
@@ -32,5 +33,76 @@
     </div>
   </div>
 </div>
+
+
+
+<div class="col-12 md:col-9"> 
+  <div class="p-grid row mt-4" >
+   <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 mt-2 rounded">
+    <p-card class="">
+      <div *ngFor="let item of progressItems" class="grid align-items-center mb-3">
+        <!-- Left Column: Name and Category -->
+        <div class="col-6">
+          <div class="progressbar font-bold text-900">{{ item.name }}</div>
+          <small class="text-600">{{ item.category }}</small>
+        </div>
+    
+        <!-- Right Column: Progress Bar + % -->
+        <div class="col-6 flex justify-content-end align-items-center gap-2">
+          <p-progressBar 
+            [value]="item.percent" 
+            [style]="{ width: '100px', height: '8px' }"
+            [styleClass]="item.colorClass"
+            [showValue]="false"
+          ></p-progressBar>
+          <div class="text-sm text-900">{{ item.percent }}%</div>
+        </div>
+      </div>
+    </p-card>
+    
+   </div>
+   <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 mt-2 rounded">
+     <p-card>
+      <h6 class="fw-bold">Recent Sales</h6>
+      <p-table
+        [value]="products"
+        [paginator]="true"
+        [rows]="5"
+        
+        responsiveLayout="scroll"
+        [showCurrentPageReport]="false"
+      >
+        <ng-template  pTemplate="header" class="bg-white">
+          <tr>
+            <th>Image</th>
+            <th>Name <i class="pi pi-sort-alt"></i></th>
+            <th>Price <i class="pi pi-sort-alt"></i></th>
+            <th>View</th>
+          </tr>
+        </ng-template>
+    
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>
+              <img [src]="product.image" alt="{{ product.name }}" width="40" />
+            </td>
+            <td>{{ product.name }}</td>
+            <td>${{ product.price }}</td>
+            <td>
+              <i class="fa fa-search cursor-pointer" aria-hidden="true"></i>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card> 
+    
+
+
+    
+   </div>
+  </div>
+</div>
+
+
 
 

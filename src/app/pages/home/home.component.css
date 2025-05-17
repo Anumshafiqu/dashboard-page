@@ -1,2 +1,54 @@
-
+.custom-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 1rem;
+  }
+  
+  .custom-progress .p-progressbar-value {
+    transition: width 0.5s ease-in-out;
+  }
+  ::ng-deep .bar-blue .p-progressbar-value {
+    background-color: #2196F3;
+  }
+  
+  ::ng-deep .bar-orange .p-progressbar-value {
+    background-color: #FF9800;
+  }
+  
+  ::ng-deep .bar-purple .p-progressbar-value {
+    background-color: #9C27B0;
+  }
+  
+  ::ng-deep .bar-teal .p-progressbar-value {
+    background-color: #009688;
+  }
+  
+  ::ng-deep .bar-red .p-progressbar-value {
+    background-color: #F44336;
+  }
+  
+  ::ng-deep .bar-green .p-progressbar-value {
+    background-color: #4CAF50;
+  }
+.progressbar{
+    font-family: serif;
+    font-size: 14px;
+}  
+th,td , tr{
+    font-size: 14px;
+    font-family: serif;
+} 
+h6{
+    font-size: 15px;
+    font-family: serif;
+    font-weight: 500;
+} 
+@media screen and (min-width: 992px) {
+    .col-fixed {
+      flex: 0 0 auto;
+      width: 200px !important;
+      max-width: 200px;
+    }
+  }
+  
   

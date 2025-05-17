@@ -10,11 +10,12 @@ import { SidebarModule } from 'primeng/sidebar';
 import { pipe } from 'rxjs';
 import { TableModule } from 'primeng/table';
 import { ProgressBarModule } from 'primeng/progressbar';
+import { PaginatorModule } from 'primeng/paginator';
 
 @Component({
   selector: 'app-home',
   imports: [CardModule ,  NgClass ,  NgFor, ChartModule,
-     ChartComponent, SidebarModule , TableModule , ProgressBarModule],
+     ChartComponent, SidebarModule , TableModule , ProgressBarModule , PaginatorModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -165,20 +166,38 @@ export class HomeComponent {
   ];
 
   progressItems = [
-    { name: 'Space Point', category: 'Clothing', percent: 50, color: '#f97316' }, // orange
-    { name: 'Portal Sticker', category: 'Accessories', percent: 16, color: '#22d3ee' }, // cyan
-    { name: 'Supernova Sticker', category: 'Accessories', percent: 67, color: '#ec4899' }, // pink
-    { name: 'Wonders Notebook', category: 'Office', percent: 35, color: '#22c55e' }, // green
-    { name: 'Mat Black Case', category: 'Accessories', percent: 75, color: '#8b5cf6' }, // purple
-    { name: 'Robots T-Shirt', category: 'Clothing', percent: 40, color: '#2dd4bf' }, // teal
+    { name: 'Space T-Shirt', category: 'Clothing', percent: 50, colorClass: 'bar-blue' },
+    { name: 'Portal Sticker', category: 'Accessories', percent: 16, colorClass: 'bar-orange' },
+    { name: 'Supernova Sticker', category: 'Accessories', percent: 67, colorClass: 'bar-purple' },
+    { name: 'Wonders Notebook', category: 'Office', percent: 35, colorClass: 'bar-teal' },
+    { name: 'Mat Black Case', category: 'Accessories', percent: 75, colorClass: 'bar-red' },
+    { name: 'Robots T-Shirt', category: 'Clothing', percent: 50, colorClass: 'bar-green' }
   ];
 
 
 
 
 
-
-
+  products = [
+    { name: 'Bamboo Watch', price: 65, image: 'https://primefaces.org/cdn/primevue/images/product/bamboo-watch.jpg' },
+    { name: 'Black Watch', price: 72, image: 'https://primefaces.org/cdn/primevue/images/product/black-watch.jpg' },
+    { name: 'Blue Band', price: 79, image: 'https://primefaces.org/cdn/primevue/images/product/blue-band.jpg' },
+    { name: 'Blue T-Shirt', price: 29, image: 'https://primefaces.org/cdn/primevue/images/product/blue-t-shirt.jpg' },
+    { name: 'Bracelet', price: 15, image: 'https://primefaces.org/cdn/primevue/images/product/bracelet.jpg' },
+    { name: 'Brown Purse', price: 120, image: 'https://primefaces.org/cdn/primevue/images/product/brown-purse.jpg' },
+    { name: 'Chakra Bracelet', price: 32, image: 'https://primefaces.org/cdn/primevue/images/product/chakra-bracelet.jpg' },
+    { name: 'Galaxy Earrings', price: 34, image: 'https://primefaces.org/cdn/primevue/images/product/galaxy-earrings.jpg' },
+    { name: 'Game Controller', price: 99, image: 'https://primefaces.org/cdn/primevue/images/product/game-controller.jpg' },
+    { name: 'Gaming Set', price: 299, image: 'https://primefaces.org/cdn/primevue/images/product/gaming-set.jpg' }
+  ];
+  rows = 5;
+  goToNextPage(table: any) {
+    const currentPage = table.first / this.rows;
+    const totalPages = Math.ceil(this.products.length / this.rows);
+    if (currentPage < totalPages - 1) {
+      table.first = table.first + this.rows;
+    }
+  }
 
 
 
