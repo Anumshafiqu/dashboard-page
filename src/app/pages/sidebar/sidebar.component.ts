@@ -37,7 +37,7 @@ export class SidebarComponent {
       // { label: 'Main', icon: PrimeIcons.HOME },
       // { label: 'Dashboard', icon: PrimeIcons.CHART_LINE },
       // { label: 'UI Components', icon: PrimeIcons.COG },
-      { label: 'Forms layout', icon: PrimeIcons.FILE },
+      // { label: 'Forms layout', icon: PrimeIcons.FILE , route: '/formslayout'},
       { label: 'Tables', icon: PrimeIcons.TABLE },
       { label: 'Buttons', icon: PrimeIcons.CHECK_SQUARE },
       { label: 'Inputs', icon: PrimeIcons.PENCIL },

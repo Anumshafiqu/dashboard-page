@@ -5,10 +5,11 @@ import { HomeComponent } from '../home/home.component';
 import { NgClass, NgIf } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { SidebarModule } from 'primeng/sidebar';
+import { FormslayoutComponent } from '../formslayout/formslayout.component';
 
 @Component({
   selector: 'app-main',
-  imports: [HeaderComponent , SidebarComponent, HomeComponent , NgIf],
+  imports: [HeaderComponent , SidebarComponent , NgIf , RouterOutlet],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

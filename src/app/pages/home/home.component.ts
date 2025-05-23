@@ -11,6 +11,7 @@ import { pipe } from 'rxjs';
 import { TableModule } from 'primeng/table';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { PaginatorModule } from 'primeng/paginator';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -50,12 +51,12 @@ export class HomeComponent {
       iconBg: 'bg-purple-100 text-purple-500'
     }
   ];
-  data: any;
-  options: any;
+   data: any;
+   options: any;
 
-  platformId = inject(PLATFORM_ID);
+ platformId = inject(PLATFORM_ID);
 
-  constructor(private cd: ChangeDetectorRef) { }
+   constructor(private cd: ChangeDetectorRef , private http : HttpClient) { }
 
   ngOnInit() {
     this.initChart();
@@ -66,10 +67,10 @@ export class HomeComponent {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
   
-      const gradient = ctx!.createLinearGradient(0, 0, 0, 400); // vertical gradient
-      gradient.addColorStop(1, 'rgba(13, 150, 104, 0.8)');   // dark green (top)
-      gradient.addColorStop(0.5, 'rgba(34, 243, 160, 0.7)'); // medium green (middle)
-      gradient.addColorStop(0, 'rgba(115, 236, 174, 0.6)');   // light green (bottom)
+      const gradient = ctx!.createLinearGradient(0, 0, 0, 400); 
+      gradient.addColorStop(1, 'rgba(13, 150, 104, 0.8)');  
+      gradient.addColorStop(0.5, 'rgba(34, 243, 160, 0.7)'); 
+      gradient.addColorStop(0, 'rgba(115, 236, 174, 0.6)');   
   
       this.data = {
         labels: ['Q1', 'Q2', 'Q3', 'Q4'],
@@ -80,13 +81,13 @@ export class HomeComponent {
             backgroundColor: gradient,            
             borderRadius: 10,
             data: [10000, 24000, 22000, 18000, 10000, 25000, 15000],
-            barPercentage: 0.6,        // narrower bars
+            barPercentage: 0.6,       
             categoryPercentage: 0.6,
           },
           {
             type: 'bar',
             label: 'Dummy',
-            backgroundColor: 'rgba(0,0,0,0)', // invisible, forces x-axis grid lines
+            backgroundColor: 'rgba(0,0,0,0)',
             data: [0, 0, 0, 0, 0, 0, 0]
           }
         ]
@@ -102,7 +103,7 @@ export class HomeComponent {
           },
           legend: {
             labels: {
-              color: '#000' // black text
+              color: '#000' 
             }
           }
         },
@@ -120,7 +121,7 @@ export class HomeComponent {
               color: '#ccc',
               lineWidth: 1
             },
-            barPercentage: 0.4,       // <-- Decrease bar width
+            barPercentage: 0.4,     
             categoryPercentage: 0.6
           },
           y: {
@@ -149,6 +150,40 @@ export class HomeComponent {
       this.cd.markForCheck();
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
