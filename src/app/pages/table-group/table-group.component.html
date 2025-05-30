@@ -1,0 +1,72 @@
+
+<div class="card mt-5 mx-4 p-4 custom-scroll-table border-0">
+    <p-table 
+        [value]="customers" 
+        sortField="representative.name" 
+        sortMode="single" 
+        [scrollable]="true" 
+        scrollHeight="400px"
+        rowGroupMode="subheader" 
+        groupRowsBy="representative.name" 
+        [dataKey]="'representative.name'"
+        [tableStyle]="{'min-width': '50rem'}">
+
+        <!-- Header -->
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="min-width: 150px">Name</th>
+                <th style="min-width: 150px">Country</th>
+                <th style="min-width: 120px">Company</th>
+                <th style="min-width: 150px">Status</th>
+                <th style="min-width: 150px">Date</th>
+            </tr>
+        </ng-template>
+
+        <!-- Group Header -->
+        <ng-template pTemplate="groupheader" let-customer>
+            <tr pRowGroupHeader>
+                <td colspan="5">
+                    <div class="flex items-center gap-2">
+                        <img [alt]="customer.representative.name" 
+                            src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ customer.representative.image }}" 
+                            width="32" style="vertical-align: middle" />
+                        <span class="font-bold">{{ customer.representative.name }}</span>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+
+        <!-- Group Footer -->
+        <ng-template pTemplate="groupfooter" let-customer>
+            <tr>
+                <td colspan="5" class="text-right font-bold pr-12">
+                    Total Customers: {{ calculateCustomerTotal(customer.representative.name) }}
+                </td>
+            </tr>
+        </ng-template>
+
+        <!-- Body -->
+        <ng-template pTemplate="body" let-customer let-rowIndex="rowIndex">
+            <tr>
+                <td>{{ customer.name }}</td>
+                <td>
+                    <div class="flex items-center gap-2">
+                        <img 
+                            src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+                            [class]="'flag flag-' + customer.country.code" 
+                            style="width: 20px" />
+                        <span>{{ customer.country.name }}</span>
+                    </div>
+                </td>
+                <td>{{ customer.company }}</td>
+                <td>
+                    <p-tag 
+                        [value]="customer.status" 
+                        [severity]="getSeverity(customer.status)">
+                    </p-tag>
+                </td>
+                <td>{{ customer.date | date: 'MM/dd/yyyy' }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

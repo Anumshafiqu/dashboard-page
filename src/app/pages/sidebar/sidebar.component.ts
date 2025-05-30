@@ -9,10 +9,11 @@ import {
   transition
 } from '@angular/animations';
 import { MenuItem, PrimeIcons } from 'primeng/api';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [SidebarModule , CommonModule],
+  imports: [SidebarModule , CommonModule , RouterLink],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
   animations: [
@@ -34,11 +35,6 @@ export class SidebarComponent {
 
   ngOnInit() {
     this.items = [
-      // { label: 'Main', icon: PrimeIcons.HOME },
-      // { label: 'Dashboard', icon: PrimeIcons.CHART_LINE },
-      // { label: 'UI Components', icon: PrimeIcons.COG },
-      // { label: 'Forms layout', icon: PrimeIcons.FILE , route: '/formslayout'},
-      { label: 'Tables', icon: PrimeIcons.TABLE },
       { label: 'Buttons', icon: PrimeIcons.CHECK_SQUARE },
       { label: 'Inputs', icon: PrimeIcons.PENCIL },
       { label: 'List', icon: PrimeIcons.LIST },
