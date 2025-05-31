@@ -5,6 +5,7 @@ import { SidebarComponent } from './pages/sidebar/sidebar.component';
 import { FormslayoutComponent } from './pages/formslayout/formslayout.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TableComponent } from './pages/table/table.component';
+import { ButtonComponent } from './pages/button/button.component';
 
 export const routes: Routes = [
     {path : '', component : MainComponent , children :[
@@ -13,6 +14,7 @@ export const routes: Routes = [
         {path : 'header' , component : HeaderComponent},
         {path : 'sidebar' , component : SidebarComponent},
         {path :'formslayout' , component : FormslayoutComponent},
-        {path : 'table' , component : TableComponent}
+        {path : 'table' , component : TableComponent},
+        {path : 'button' , component : ButtonComponent}
     ]}
 ];

@@ -1,0 +1,211 @@
+.custom-button ::ng-deep .p-button {
+    border-radius: 5px !important;
+    font-size: 13px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.custom-button-1 ::ng-deep .p-button {
+    border-radius: 5px !important;
+    font-size: 14px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* color: beige; */
+}
+
+.custom-button-group ::ng-deep .p-button {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* color: beige; */
+}
+
+.custom-button-group-center ::ng-deep .p-button {
+    font-size: 14px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* color: beige; */
+}
+
+.custom-button-group-right ::ng-deep .p-button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* color: beige; */
+}
+
+.text-buttons ::ng-deep .p-button {
+    /* background-color: transparent !important; */
+    color: black !important;
+    border: none !important;
+}
+
+.custom-text-buttons ::ng-deep p-button p-button-text p-button-primary {
+    color: #2196f3 !important;
+    /* Blue */
+    border-radius: 5px;
+}
+
+::ng-deep .custom-text-buttons .p-button.p-button-text.p-button-secondary {
+    color: #61666b !important;
+    border-radius: 5px;
+}
+
+::ng-deep .custom-text-buttons .p-button.p-button-text.p-button-success {
+    color: #4caf50 !important;
+    /* Green */
+    border-radius: 5px;
+}
+
+::ng-deep .custom-text-buttons .p-button.p-button-text.p-button-info {
+    color: #00bcd4 !important;
+    /* Cyan */
+    border-radius: 5px;
+}
+
+::ng-deep .custom-text-buttons .p-button.p-button-text.p-button-warn {
+    color: #ff9800 !important;
+    /* Orange */
+    border-radius: 5px;
+}
+
+::ng-deep .custom-text-buttons .p-button.p-button-text.p-button-help {
+    color: #9c27b0 !important;
+    /* Purple */
+    border-radius: 5px;
+}
+
+::ng-deep .custom-text-buttons .p-button.p-button-text.p-button-danger {
+    color: #f44336 !important;
+    /* Red */
+    border-radius: 5px;
+}
+
+/* Optional: Plain style */
+::ng-deep .custom-text-buttons .p-button.p-button-text:not([class*="p-button-"]) {
+    color: #009688 !important;
+    /* Teal for 'Plain' */
+    border-radius: 5px;
+}
+
+/* Remove background on hover */
+::ng-deep .custom-text-buttons .p-button.p-button-text:hover {
+    background: transparent !important;
+    text-decoration: underline;
+    border-radius: 5px;
+}
+
+.text-line {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+
+/* 👇 Style the split button group wrapper */
+::ng-deep .rounded-split .p-splitbutton {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    /* ensures both buttons appear as one */
+}
+
+/* 👇 Style the left (main) button */
+::ng-deep .rounded-split .p-button {
+    margin-top: 10px;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-right: none;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Wrap both buttons together with no overflow gaps */
+::ng-deep .rounded-split .p-splitbutton {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+/* Main button (Save) — only round left corners */
+::ng-deep .rounded-split .p-splitbutton-defaultbutton {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+/* Dropdown button (icon) — only round right corners */
+::ng-deep .rounded-split .p-splitbutton-menubutton {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Optional: Remove focus/outline */
+::ng-deep .rounded-split .p-button:focus,
+::ng-deep .rounded-split .p-splitbutton-menubutton:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+::ng-deep .custom-svg-button .p-button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-color);
+}
+
+::ng-deep .custom-svg-button .p-button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::ng-deep .custom-svg-button .p-button {
+  padding: 0.5rem !important;
+  border-radius: 0.5rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+::ng-deep .custom-svg-button .svg-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::ng-deep .custom-svg-button .svg-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+
+
+

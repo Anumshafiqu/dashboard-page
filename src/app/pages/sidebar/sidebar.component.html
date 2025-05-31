@@ -1,50 +1,38 @@
-
-
-
-  <div class="mt-8 rounded hidden lg:block lg:col-3"     class="col-12 lg:col-3"> 
-    <div class="grid rounded row">
-        <div class="col-12 md:col-3">
-            <p-sidebar [(visible)]="visible" [modal]="false" [showCloseIcon]="false"
-             styleClass="w-18rem h-full mt-8 shadow-sm ml-3" class="overflow-y-auto h-14rem rounded">
-             <span class="side-links-1 px-2 font-normal">HOME</span>
-             <div class="flex flex-column ml-4 mt-3">
-                <div
-                >
-                  <i  class="text-sm pi pi-home"></i>
-                  <span class="text-sm side-links text-xs px-2 cursor-pointer" routerLink="/home">Dashboard</span>
-                </div>
-              </div>
-              
-                <div class="flex flex-column mt-3">
-                    <span class="side-links-1 px-2 mb-2 font-normal">UI COMPONENTS</span>
-               
-                         <a 
-                    class="text-sm side-links text-xs px-2 pi pi-file ml-2 mx-2 text-decoration-none text-900 cursor-pointer"
-                   routerLink="/formslayout"
-                  >
-                    &nbsp; Forms Layout
-                   </a>
-                        <a 
-                    class="text-sm side-links text-xs px-2 pi pi-table ml-2 mx-2 text-decoration-none text-900 cursor-pointer"
-                     routerLink="/table"
-                  >
-                    &nbsp;Table
-                   </a>
-                  <!-- <li class="nav-item">
-                    <a class="nav-link" href="formslayout">Link</a>
-                  </li>  -->
-                  <div
-                    *ngFor="let item of items"
-                    class="flex align-items-center text-900 gap-2 px-3 fs-6 cursor-pointer hover:surface-100 transition-duration-200"
-                  >
-                    <i [class]="item.icon" class="text-sm"></i>
-                    <span class="text-sm side-links text-xs px-2">{{ item.label }}</span>
-                  </div>
-                </div>
-              </p-sidebar>
+<div class="mt-8 rounded hidden lg:block lg:col-3" class="col-12 lg:col-3">
+  <div class="grid rounded row">
+    <div class="col-12 md:col-3">
+      <p-sidebar [(visible)]="visible" [modal]="false" [showCloseIcon]="false"
+        styleClass="w-18rem h-full mt-8 shadow-sm ml-3" class="overflow-y-auto h-14rem rounded">
+        <span class="side-links-1 px-2 font-normal">HOME</span>
+        <div class="flex flex-column ml-4 mt-3">
+          <div>
+            <i class="text-sm pi pi-home"></i>
+            <span class="text-sm side-links text-xs px-2 cursor-pointer" routerLink="/home">Dashboard</span>
+          </div>
         </div>
-    </div>
-</div> 
-  
 
-  
+        <div class="flex flex-column mt-3">
+          <span class="side-links-1 px-2 mb-2 font-normal">UI COMPONENTS</span>
+
+          <a class="text-sm side-links text-xs px-2 pi pi-file ml-2 mx-2 text-decoration-none text-900 cursor-pointer"
+            routerLink="/formslayout">
+            &nbsp; Forms Layout
+          </a>
+          <a class="text-sm side-links text-xs px-2 pi pi-table ml-2 mx-2 text-decoration-none text-900 cursor-pointer"
+            routerLink="/table">
+            &nbsp;Table
+          </a>
+          <a class="text-sm side-links text-xs px-2 pi pi-table ml-2 mx-2 text-decoration-none text-900 cursor-pointer"
+            routerLink="/button">
+            &nbsp; Button
+          </a>
+          <div *ngFor="let item of items"
+            class="flex align-items-center text-900 gap-2 px-3 fs-6 cursor-pointer hover:surface-100 transition-duration-200">
+            <i [class]="item.icon" class="text-sm"></i>
+            <span class="text-sm side-links text-xs px-2">{{ item.label }}</span>
+          </div>
+        </div>
+      </p-sidebar>
+    </div>
+  </div>
+</div>

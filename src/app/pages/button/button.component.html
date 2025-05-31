@@ -1,0 +1,172 @@
+<div class="p-grid row mx-1">
+    <!-- Left Side -->
+    <div class="col-6 mt-7">
+        <p-card>
+            <p class="fw-medium ml-3 mt-0">Default</p>
+            <div class="flex gap-2 ml-3">
+                <p-button label="Submit" class="custom-button fw-medium btn-sm" severity="success"></p-button>
+                <p-button label="Disabled" class="custom-button" severity="success" [disabled]="true"></p-button>
+                <p-button label="Link" class="custom-button" severity="success"></p-button>
+            </div>
+        </p-card>
+        <div class="col-12 mt-3">
+            <p-card>
+                <p class="fw-medium mb-0 ml-2">Severities</p>
+                <div class="gap-2 ml-2">
+                    <p-button label="Primary" class="custom-button-1 fw-medium btn-sm" />
+                    <p-button label="Secondary" severity="secondary" class="custom-button-1 fw-medium btn-sm mx-2" />
+                    <p-button label="Success" severity="success" class="custom-button-1 fw-medium btn-sm mx-2 mt-2" />
+                    <p-button label="Info" severity="info" class="custom-button-1 fw-medium btn-sm mx-2 mt-2" />
+                    <p-button label="Warn" severity="warning" class="custom-button-1 fw-medium btn-sm mx-2 mt-2" /><br>
+                    <p-button label="Help" severity="help" class="custom-button-1 fw-medium btn-sm mt-2" />
+                    <p-button label="Danger" severity="danger" class="custom-button-1 fw-medium btn-sm mx-2 mt-2" />
+                    <p-button label="Contrast" severity="contrast" class="custom-button-1 fw-medium btn-sm" />
+                </div>
+            </p-card>
+        </div>
+        <div class="col-12 mt-3">
+            <p-card>
+                <p class="fw-medium mb-0 ml-2">Text</p>
+                <div class="gap-2 justify-start">
+                    <p-button label="Primary" variant="text" styleClass="p-button-text text-primary-500"
+                        class="text-line"></p-button>
+                    <p-button label="Secondary" variant="text" styleClass="p-button-text text-secondary"
+                        class="text-line"></p-button>
+                    <p-button label="Success" variant="text" styleClass="p-button-text text-green-500"
+                        class="text-line"></p-button>
+                    <p-button label="Info" variant="text" styleClass="p-button-text text-blue-500"
+                        class="text-line"></p-button>
+                    <p-button label="Warn" variant="text" styleClass="p-button-text text-orange-500"
+                        class="text-line"></p-button>
+                    <p-button label="Help" variant="text" styleClass="p-button-text text-purple-500"
+                        class="text-line"></p-button>
+                    <p-button label="Danger" variant="text" styleClass="p-button-text text-red-500"
+                        class="text-line"></p-button>
+                    <p-button label="Plain" variant="text" styleClass="p-button-text text-teal-500"
+                        class="text-line"></p-button>
+                </div>
+            </p-card>
+        </div>
+        <div class="col-12 mt-3">
+            <p-card>
+                <p class="fw-medium mb-0 ml-2">Outlined</p>
+                <div class="">
+                    <p-button label="Primary" severity="primary" outlined
+                        class="custom-button-1 fw-medium btn-sm mx-2"></p-button>
+                    <p-button label="Secondary" severity="secondary" outlined
+                        class="custom-button-1 fw-medium btn-sm mx-2"></p-button>
+                    <p-button label="Success" severity="success" outlined
+                        class="custom-button-1 fw-medium btn-sm mx-2"></p-button>
+                    <p-button label="Info" severity="info" outlined
+                        class="custom-button-1 fw-medium btn-sm mx-2"></p-button>
+                    <p-button label="Warn" severity="warning" outlined
+                        class="custom-button-1 fw-medium btn-sm mx-2"></p-button>
+                    <p-button label="Help" severity="help" outlined
+                        class="custom-button-1 fw-medium btn-sm mx-2"></p-button>
+                    <p-button label="Danger" severity="danger" outlined
+                        class="custom-button-1 fw-medium btn-sm mx-2"></p-button>
+                </div>
+            </p-card>
+        </div>
+        <div class="col-12 mt-3">
+            <p-card>
+                <p class="fw-medium mb-0 ml-2">Group</p>
+                <div class="rounded ml-2">
+                    <p-buttonGroup>
+                        <p-button label="Save" icon="pi pi-check" severity="success"
+                            class="custom-button-group fw-medium btn-sm"></p-button>
+                        <p-button label="Delete" icon="pi pi-trash" severity="success"
+                            class="custom-button-group-center fw-medium btn-sm"></p-button>
+                        <p-button label="Cancel" icon="pi pi-times" severity="success"
+                            class="custom-button-group-right fw-medium btn-sm"></p-button>
+                    </p-buttonGroup>
+                </div>
+            </p-card>
+        </div>
+        <div class="col-12 mt-3">
+            <p-card>
+                <p class="fw-medium mb-0 ml-2">SplitButton</p>
+                <div class="">
+                    <p-toast />
+                    <p-splitButton label="Save" (onClick)="save()" [model]="items" class="text-sm btn-sm mx-2"
+                        styleClass="rounded-split" />
+                    <p-splitButton label="Save" (onClick)="save()" [model]="items" severity="secondary"
+                        class=" fw-medium btn-sm mx-2" styleClass="rounded-split" />
+                    <p-splitButton label="Save" (onClick)="save()" [model]="items" severity="success"
+                        class=" fw-medium btn-sm mx-2" styleClass="rounded-split" />
+                    <p-splitButton label="Save" (onClick)="save()" [model]="items" severity="info"
+                        class=" fw-medium btn-sm mx-2" styleClass="rounded-split" />
+                    <p-splitButton label="Save" (onClick)="save()" [model]="items" severity="warning"
+                        class=" fw-medium btn-sm mx-2" styleClass="rounded-split" />
+                    <p-splitButton label="Save" (onClick)="save()" [model]="items" severity="help"
+                        class=" fw-medium btn-sm mx-2" styleClass="rounded-split" />
+                    <p-splitButton label="Save" (onClick)="save()" [model]="items" severity="danger"
+                        class="fw-medium btn-sm mx-2" styleClass="rounded-split" />
+                </div>
+            </p-card>
+        </div>
+        <div class="col-12 mt-3">
+            <p-card>
+                <p class="fw-medium mb-0 ml-2">template</p>
+                <p class="fw-medium mb-0 ml-2"></p>
+          <p-button  styleClass="custom-primeng-button" severity="success" class="custom-button-1 mx-2">
+                    
+                        <img src="https://www.primefaces.org/cdn/primeng/images/logo.svg" alt="PrimeNG" width="20"
+                            height="20" />
+                   
+                </p-button>
+                <p-button styleClass="custom-primeng-button" severity="success" [outlined]="true" label="PrimeNG" class="custom-button-1 mx-1">
+                    <ng-template pTemplate="icon">
+                        <img src="https://www.primefaces.org/cdn/primeng/images/logo.svg" alt="PrimeNG" width="20"
+                            height="20" />
+                    </ng-template>
+                </p-button>
+
+
+
+
+
+
+            </p-card>
+        </div>
+    </div>
+     <!-- <div class="col-6 mt-5">
+        <p-card>
+
+        </p-card>
+        <div class="col-12 mt-3">
+            <p-card class="mt-3">
+            </p-card>
+        </div>
+        <div class="col-12 mt-3">
+            <p-card class="mt-3">
+
+            </p-card>
+        </div>
+    </div>  -->
+</div>
+<div class="p-grid row mx-2">
+    <!-- <div class="col-12 mt-3">
+        <p-card header="">
+            <p class="fw-medium ml-2">Advanced</p>
+            <form class="p-fluid">
+                <div class="px-2">
+                    <div class="formgrid d-flex row grid align-items-center">
+                        <div class="col-6">
+                        </div>
+                        <div class="col-6">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                        </div>
+                        <div class="col-6">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </p-card>
+    </div> -->
+</div>
