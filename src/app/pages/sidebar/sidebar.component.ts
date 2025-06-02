@@ -35,8 +35,8 @@ export class SidebarComponent {
 
   ngOnInit() {
     this.items = [
-      { label: 'Buttons', icon: PrimeIcons.CHECK_SQUARE },
-      { label: 'Inputs', icon: PrimeIcons.PENCIL },
+      // { label: 'Buttons', icon: PrimeIcons.CHECK_SQUARE },
+      // { label: 'Inputs', icon: PrimeIcons.PENCIL , routerLink: 'input'},
       { label: 'List', icon: PrimeIcons.LIST },
       { label: 'Tree', icon: PrimeIcons.SITEMAP },
       { label: 'Panel', icon: PrimeIcons.CLONE },

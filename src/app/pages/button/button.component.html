@@ -109,41 +109,155 @@
             <p-card>
                 <p class="fw-medium mb-0 ml-2">template</p>
                 <p class="fw-medium mb-0 ml-2"></p>
-          <p-button  styleClass="custom-primeng-button" severity="success" class="custom-button-1 mx-2">
-                    
-                        <img src="https://www.primefaces.org/cdn/primeng/images/logo.svg" alt="PrimeNG" width="20"
-                            height="20" />
-                   
+                <p-button styleClass="custom-primeng-button" severity="success" class="custom-button-1 mx-2">
+                    <img src="https://www.primefaces.org/cdn/primeng/images/logo.svg" alt="PrimeNG" width="20"
+                        height="20" />
                 </p-button>
-                <p-button styleClass="custom-primeng-button" severity="success" [outlined]="true" label="PrimeNG" class="custom-button-1 mx-1">
+                <p-button styleClass="custom-primeng-button" severity="success" [outlined]="true" label="PrimeNG"
+                    class="custom-button-1 mx-1">
                     <ng-template pTemplate="icon">
                         <img src="https://www.primefaces.org/cdn/primeng/images/logo.svg" alt="PrimeNG" width="20"
                             height="20" />
                     </ng-template>
                 </p-button>
-
-
-
-
-
-
             </p-card>
         </div>
     </div>
-     <!-- <div class="col-6 mt-5">
+    <div class="col-6 mt-7">
         <p-card>
+            <p class="fw-medium mb-0 ml-2">Icon</p>
+            <div class="">
+                <p-button icon="pi pi-bookmark" severity="success" class="custom-button-1 mx-2 p-0 text-xs"></p-button>
+
+                <!-- Icon + Text -->
+                <p-button label="Bookmark" icon="pi pi-bookmark" severity="success"
+                    class="custom-button-1 mx-2"></p-button>
+
+                <!-- Icon + Text + Success -->
+                <p-button label="Bookmark" icon="pi pi-bookmark" styleClass="p-button-success" severity="success"
+                    class="custom-button-1 mx-2"></p-button>
+            </div>
 
         </p-card>
         <div class="col-12 mt-3">
             <p-card class="mt-3">
+                <p class="fw-medium mb-0 ml-2">Raised</p>
+                <div>
+                    <p-button label="Primary" [raised]="true" class="custom-button-1 fw-medium btn-sm mx-1" />
+                    <p-button label="Secondary" [raised]="true" severity="secondary"
+                        class="custom-button-1 fw-medium btn-sm mx-1" />
+                    <p-button label="Success" [raised]="true" severity="success"
+                        class="custom-button-1 fw-medium btn-sm mx-1" />
+                    <p-button label="Info" [raised]="true" severity="info"
+                        class="custom-button-1 fw-medium btn-sm mx-1" />
+                    <p-button label="Warn" [raised]="true" severity="warning"
+                        class="custom-button-1 fw-medium btn-sm mx-1" />
+                    <p-button label="Help" [raised]="true" severity="help"
+                        class="custom-button-1 fw-medium btn-sm mx-1" />
+                    <p-button label="Danger" [raised]="true" severity="danger"
+                        class="custom-button-1 fw-medium btn-sm mx-1" />
+                    <p-button label="Contrast" [raised]="true" severity="contrast"
+                        class="custom-button-1 fw-medium btn-sm mx-1" />
+                </div>
             </p-card>
         </div>
         <div class="col-12 mt-3">
             <p-card class="mt-3">
-
+                <p class="fw-medium mb-0 ml-2">Rounded</p>
+                <p-button label="Primary" [rounded]="true" class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button label="Secondary" [rounded]="true" severity="secondary"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button label="Success" [rounded]="true" severity="success"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button label="Info" [rounded]="true" severity="info"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button label="Warn" [rounded]="true" severity="warning"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button label="Help" [rounded]="true" severity="help"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button label="Danger" [rounded]="true" severity="danger"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button label="Contrast" [rounded]="true" severity="contrast"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
             </p-card>
         </div>
-    </div>  -->
+        <div class="col-12 mt-3">
+            <p-card class="mt-3">
+                <p class="fw-medium mb-0 ml-2">Rounded icon</p>
+                <p-button icon="pi pi-check" [rounded]="true" severity="primary"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-bookmark" [rounded]="true" severity="secondary"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-search" [rounded]="true" severity="success"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-user" [rounded]="true" severity="info"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-bell" [rounded]="true" severity="warning"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-heart" [rounded]="true" severity="help"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-times" [rounded]="true" severity="danger"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+            </p-card>
+        </div>
+        <div class="col-12 mt-3">
+            <p-card class="mt-3">
+                <p class="fw-medium mb-0 ml-2">Rounded text</p>
+                <p-button icon="pi pi-check" [rounded]="true" [text]="true" [raised]="true"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-bookmark" [rounded]="true" [text]="true" [raised]="true" severity="secondary"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-search" [rounded]="true" [text]="true" [raised]="true" severity="success"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-user" [rounded]="true" [text]="true" [raised]="true" severity="info"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-bell" [rounded]="true" [text]="true" [raised]="true" severity="warning"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-heart" [rounded]="true" [text]="true" [raised]="true" severity="help"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-times" [rounded]="true" [text]="true" [raised]="true" severity="danger"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+            </p-card>
+        </div>
+        <div class="col-12 mt-3">
+            <p-card class="mt-3">
+                <p class="fw-medium mb-0 ml-2">Rounded Text</p>
+                <p-button icon="pi pi-check" [rounded]="true" [outlined]="true"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-bookmark" [rounded]="true" severity="secondary" [outlined]="true"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-search" [rounded]="true" severity="success" [outlined]="true"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-user" [rounded]="true" severity="info" [outlined]="true"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-bell" [rounded]="true" severity="warning" [outlined]="true"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-heart" [rounded]="true" severity="help" [outlined]="true"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+                <p-button icon="pi pi-times" [rounded]="true" severity="danger" [outlined]="true"
+                    class="custom-button-raised fw-medium btn-sm mx-1" />
+            </p-card>
+        </div>
+        <div class="col-12 mt-3">
+            <p-card class="mt-3 text-xs">
+                <p class="fw-medium mb-2 ml-2">Loading</p>
+
+                <!-- Icon left + Text -->
+                <p-button label="Search" icon="pi pi-search" class="custom-button-1 fw-medium text-xs p-0 mx-1" severity="success" [rounded]="true"></p-button>
+
+                <!-- Text + Icon right -->
+                <p-button label="Search" icon="pi pi-search" iconPos="right" class="p-button-success mx-1 custom-button-1 fw-medium btn-sm text-xs" severity="success"
+                    [rounded]="true"></p-button>
+
+                <!-- Icon only -->
+                 <p-button icon="pi pi-search" severity="success" class="custom-button-1 mx-1 p-0 text-xs"></p-button>
+
+                <!-- Text only -->
+                <p-button label="Search" class="p-button-success custom-button-1 fw-medium btn-sm mx-1 text-xs" [rounded]="true" severity="success"></p-button>
+            </p-card>
+
+        </div>
+    </div>
 </div>
 <div class="p-grid row mx-2">
     <!-- <div class="col-12 mt-3">

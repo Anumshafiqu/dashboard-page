@@ -1,0 +1,214 @@
+<div class="p-grid row mx-1">
+    <div class="col-6 mt-7">
+        <p-card>
+            <p class="fw-medium">Input Text</p>
+            <div class="grid row">
+                <div class="col-4">
+                    <input type="text" pInputText class="form-control p-1 fw-normal px-2" placeholder="Defalut" />
+                </div>
+                <div class="col-4">
+                    <input pInputText [disabled]="true" class="form-control p-1 fw-normal px-2"
+                        placeholder="Disabled" />
+                </div>
+                <div class="col-4">
+                    <input pInputText class="ng-invalid ng-dirty form-control p-1 fw-normal px-2"
+                        placeholder="Invalid" />
+                </div>
+            </div>
+            <p class="fw-medium">Icons</p>
+            <div class="col-12">
+                <p-iconField>
+                    <p-inputIcon styleClass="pi pi-user text-xs" />
+                    <input type="text" pInputText placeholder="Username"
+                        class="form-control p-1 fw-normal input-user px-4" />
+                </p-iconField>
+            </div>
+            <div class="col-12">
+                <div class="mb-3">
+                    <span class="p-input-icon-right w-full">
+                        <input pInputText type="text" placeholder="Search" class="w-full"
+                            class="form-control p-1 fw-normal px-2" />
+                        <i class="pi pi-search text-xs"></i>
+                    </span>
+                </div>
+            </div>
+            <p class="fw-medium">Float Label</p>
+            <div class="col-12 mb-3 p-float-label mt-3">
+                <input id="float-username" type="text" pInputText class="w-full"
+                    class="form-control p-1 fw-normal px-2" />
+                <label for="float-username" class="text-xs mx-2 fw-normal">Username</label>
+            </div>
+            <p class="fw-medium">Textarea</p>
+            <div class="col-12 mb-3">
+                <textarea pInputTextarea rows="4" placeholder="Your Message" class="w-full"
+                    class="form-control p-1 fw-normal px-2"></textarea>
+            </div>
+            <p class="fw-medium">AutoComplete</p>
+            <div class="col-12 mb-3">
+                <p-autoComplete [(ngModel)]="selectedCountry" [suggestions]="filteredCountries"
+                    (completeMethod)="filterCountries($event)" [dropdown]="true" placeholder="Search" inputId="country"
+                    [style]="{ width: '100%' }" class="custom-autocomplete p-0" (onDropdownClick)="showAllCountries()">
+                </p-autoComplete>
+            </div>
+            <p class="fw-medium">DatePicker</p>
+            <div class="col-12 custom-calendar-container">
+                <p-calendar [(ngModel)]="selectedDate" showIcon="true" dateFormat="dd/mm/yy" placeholder="Select Date"
+                    class="p-fluid custom-calendar p-0"></p-calendar>
+            </div>
+            <div class="col-12">
+            </div>
+        </p-card>
+        <div class="col-12">
+            <p-card>
+                <div class="col-12">
+                    <p class="fw-medium">Slider</p>
+                    <div>
+                        <input type="text" pInputText [(ngModel)]="value2" class="w-full mb-4 form-control" />
+                        <p-slider [(ngModel)]="value2" class="w-full" />
+                    </div>
+                </div>
+                <p class="fw-medium">ColorPicker</p>
+                <div class="col-12">
+                    <div class="flex justify-center ml-2">
+                        <p-colorPicker [(ngModel)]="color" />
+                    </div>
+
+                </div>
+            </p-card>
+        </div>
+    </div>
+    <div class="col-6 mt-7">
+        <div class="col-12 ">
+            <p-card class="">
+                <p class="fw-medium">RadioButton</p>
+                <div class="">
+
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <p-radioButton name="pizza" value="Cheese" [(ngModel)]="ingredient" inputId="ingredient1" />
+                            <label for="ingredient1" class="text-sm">Chicago</label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <p-radioButton name="pizza" value="Mushroom" [(ngModel)]="ingredient"
+                                inputId="ingredient2" />
+                            <label for="ingredient2" class="text-sm">Rome</label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <p-radioButton name="pizza" value="Pepper" [(ngModel)]="ingredient" inputId="ingredient3"
+                                class="text-xs" />
+                            <label for="ingredient3" class="text-sm">New York</label>
+                        </div>
+                    </div>
+                </div>
+                <p class="fw-medium mt-2">CheckBox</p>
+                <div class="">
+
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <p-checkbox name="topping" value="Cheese" [(ngModel)]="selectedToppings"
+                                inputId="topping1"></p-checkbox>
+                            <label for="topping1" class="text-sm">Chicago</label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <p-checkbox name="topping" value="Mushroom" [(ngModel)]="selectedToppings"
+                                inputId="topping2"></p-checkbox>
+                            <label for="topping2" class="text-sm">Rome</label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <p-checkbox name="topping" value="Pepperoni" [(ngModel)]="selectedToppings"
+                                inputId="topping3"></p-checkbox>
+                            <label for="topping3" class="text-sm">New York</label>
+                        </div>
+                    </div>
+                </div>
+                <p class="fw-medium mt-2">ToggleSwitch</p>
+                <div class="form-check form-switch ml-3">
+                    <input class="form-check-input form-control fs-5" type="checkbox" id="flexSwitchCheckDefault"
+                        [(ngModel)]="isToggled">
+                </div>
+
+            </p-card>
+            <div class="col-12">
+                <p-card>
+                    <div class="card flex justify-center">
+                        <p-listbox [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [filter]="true"
+                            class="w-full md:w-56 p-0 text-xs custom-listbox px-0" />
+                    </div>
+                    <p class="fw-medium mt-2 ml-2">Select</p>
+                    <div class="col-12">
+                        <div class="flex justify-center w-full">
+                            <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"
+                                class="w-full md:w-100 p-0 custom-dropdown"></p-dropdown>
+                        </div>
+                    </div>
+                    <p class="fw-medium mt-2 ml-2">Multi Select</p>
+                    <div class="col-12">
+                        <div class="px-0 py-0 mx-1 card border-0 p-0" style="width: 100%;">
+                            <p-multiSelect [options]="cities" [(ngModel)]="selectedCities" optionLabel="name"
+                                placeholder="search cities" [maxSelectedLabels]="3"
+                                styleClass="custom-multiselect w-100"></p-multiSelect>
+                        </div>
+                    </div>
+                    <p class="fw-medium mt-2 ml-2">Tree Select</p>
+                    <div class="col-12 w-100">
+                        <div class="px-0 py-0 mx-1 card border-0 p-0" style="width: 100%;">
+                            <p-treeSelect [options]="items" [(ngModel)]="selectedItem" placeholder="Select Item"
+                                [filter]="true" class="w-100 custom-treeselect" styleClass="custom-treeselect"
+                                [metaKeySelection]="false" styleClass="custom-multiselect w-100"></p-treeSelect>
+                        </div>
+
+                    </div>
+
+                </p-card>
+            </div>
+            <div class="col-12">
+                <p-card>
+                    <p class="fw-medium mb-1 ml-2">Tooglebutton</p>
+                    <div class="col-12 flex">
+                        <p-toggleButton [(ngModel)]="checked" onLabel="Yes" offLabel="No"
+                            styleClass="custom-togglebutton w-15 py-1 text-xs" size="small"></p-toggleButton>
+
+                    </div>
+                    <p class="fw-medium ml-2 mb-1">Select button</p>
+                    <div class="col-12">
+                        <div class="p-0">
+                            <p-selectButton [options]="paymentOptions" [(ngModel)]="value" [multiple]="true"
+                                optionLabel="name" optionValue="value"
+                                styleClass="no-padding-selectbutton w-15 py-1 text-xs" />
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="p-grid row mx-2">
+    <!-- <div class="col-12 mt-3">
+        <p-card header="">
+            <p class="fw-medium ml-2">Advanced</p>
+            <form class="p-fluid">
+                <div class="px-2">
+                    <div class="formgrid d-flex row grid align-items-center">
+                        <div class="col-6">
+                        </div>
+                        <div class="col-6">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                        </div>
+                        <div class="col-6">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </p-card>
+    </div> -->
+</div>

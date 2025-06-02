@@ -171,41 +171,57 @@ p {
     box-shadow: none !important;
     outline: none !important;
 }
+
 ::ng-deep .custom-svg-button .p-button {
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--primary-color);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary-color);
 }
 
 ::ng-deep .custom-svg-button .p-button {
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 ::ng-deep .custom-svg-button .p-button {
-  padding: 0.5rem !important;
-  border-radius: 0.5rem !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ccc;
-  background-color: white;
+    padding: 0.5rem !important;
+    border-radius: 0.5rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-color: white;
 }
 
 ::ng-deep .custom-svg-button .svg-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 ::ng-deep .custom-svg-button .svg-icon svg {
-  width: 1.5rem;
-  height: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+::ng-deep p-button {
+    border-radius: 0.5rem;
+    /* Optional custom round corners */
 }
 
 
+.custom-button-raised ::ng-deep .p-button {
+    border-radius: 20px !important;
+    font-size: 14px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* color: beige; */
+}
 
 
