@@ -413,3 +413,129 @@ p-radioButton {
 
 
 
+::ng-deep .custom-autocomplete .p-autocomplete-panel {
+  padding: 0 !important; /* No extra padding around panel */
+}
+
+::ng-deep .custom-autocomplete .p-autocomplete-items .p-autocomplete-item {
+  padding: 0 0 !important; /* Top-Bottom: 8px, Left-Right: 16px */
+  font-size: 14px; /* Optional: cleaner font size */
+}
+::ng-deep .custom-calendar .p-datepicker-calendar {
+  border-spacing: 0 !important; /* Removes spacing between table cells */
+  width: 100% !important;
+}
+
+::ng-deep .custom-calendar .p-datepicker-calendar th,
+::ng-deep .custom-calendar .p-datepicker-calendar td {
+  text-align: center;
+  padding: 0 !important;
+  /* margin: 50px !important; */
+}
+
+::ng-deep .custom-calendar .p-datepicker-calendar tr th:first-child,
+::ng-deep .custom-calendar .p-datepicker-calendar tr td:first-child {
+  text-align: center !important; 
+}
+
+
+::ng-deep .custom-dropdown .p-dropdown-panel {
+  padding: 5px !important; 
+  font-size: 13px;
+}
+
+
+::ng-deep .custom-dropdown .p-dropdown-items {
+  padding: 0 !important; /* Remove inner list padding */
+}
+
+::ng-deep .custom-dropdown .p-dropdown-item {
+  padding: 5px 5px !important; /* Balanced top-bottom and left-right padding */
+  text-align: left; /* Ensures clean alignment */
+}
+
+::ng-deep .custom-multiselect .p-multiselect-panel {
+  padding: 5px !important;
+  font-size: 13px;
+
+}
+
+::ng-deep .custom-multiselect .p-multiselect-items {
+  padding: 0 !important;
+  font-size: 13px; 
+
+}
+
+::ng-deep .custom-multiselect .p-multiselect-item {
+  padding: 5px 5px !important; /* Optional: clean item spacing */
+  text-align: left;
+  margin-top: 5px;
+}
+
+
+
+::ng-deep .custom-multiselect .p-multiselect-panel {
+  padding: 0 !important;
+}
+
+::ng-deep .custom-multiselect .p-multiselect-header {
+  padding: 0.25rem 0.5rem !important;
+}
+
+::ng-deep .custom-multiselect .p-multiselect-filter-container {
+  padding: 0 !important; 
+  margin: 0 !important;
+}
+
+::ng-deep .custom-multiselect .p-multiselect-filter {
+  padding: 5px !important;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 300px;
+  margin: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Remove padding/indentation on tree nodes inside p-treeSelect dropdown */
+::ng-deep .p-treeSelect-panel .p-treenode-content {
+  padding: 0 !important;
+}
+
+/* Optional: also remove icon margin if needed */
+::ng-deep .p-treeSelect-panel .p-treenode-toggler {
+padding: 0 !important;
+}
+
+/* Remove extra left padding from labels inside nodes */
+::ng-deep .p-treeSelect-panel .p-treenode-label {
+padding: 0 !important;
+}
+.rating{
+    font-size: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

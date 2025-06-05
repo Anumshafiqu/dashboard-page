@@ -1,4 +1,4 @@
-import { DatePipe } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TreeNode } from 'primeng/api';
@@ -9,10 +9,14 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { ColorPickerModule } from 'primeng/colorpicker';
 import { DropdownModule } from 'primeng/dropdown';
 import { IconFieldModule } from 'primeng/iconfield';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { InputTextModule } from 'primeng/inputtext';
+import { KnobModule } from 'primeng/knob';
 import { ListboxModule } from 'primeng/listbox';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { PanelModule } from 'primeng/panel';
@@ -32,7 +36,8 @@ interface City {
   imports: [InputMaskModule , PanelModule  , MultiSelectModule , DropdownModule , CheckboxModule , RadioButtonModule ,
     CalendarModule , FormsModule , ReactiveFormsModule , CardModule , IconFieldModule , InputIconModule , AutoCompleteModule ,
    InputNumberModule , RadioButtonModule , ToggleButtonModule , InputSwitchModule , ListboxModule , MultiSelectModule,
-   TreeSelectModule , SelectButtonModule , SliderModule , RatingModule , ColorPickerModule
+   TreeSelectModule , SelectButtonModule , SliderModule , RatingModule , ColorPickerModule , KnobModule, InputGroupAddonModule , InputGroupModule , InputTextModule,
+    InputGroupModule, CommonModule
   ],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css' ,
@@ -115,6 +120,7 @@ filterCountries(event: any) {
 showAllCountries() {
   this.filteredCountries = [...this.countries];
 }
+ text1: string | undefined;
     cities!: City[];
 
     selectedCity!: City;
@@ -129,13 +135,16 @@ showAllCountries() {
     //         { name: 'Paris', code: 'PRS' }
     //     ];
     // }
+
 date1: Date | undefined;
 selectedDate: Date | undefined;
 value1: number = 1;
+  value4: number = 50;
 ingredient!: string;
 selectedToppings: string[] = [];
 isToggled: boolean = false;
   selectedItem: any;
+  ratingValue: number = 3;
   items: TreeNode[] = [];
 
     value!: number;
