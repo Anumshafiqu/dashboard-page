@@ -524,6 +524,60 @@ padding: 0 !important;
 
 
 
+.zero-padding-input {
+  padding: 0 !important;
+  height: 35px;
+  font-size: 13px;
+}
+.user{
+    height: 35px;
+}
+.user-2{
+    font-size: 13px ;
+}
+.zero-padding-input {
+  padding: 0 !important;
+  height: 35px;
+  font-size: 13px;
+}
+
+/* Style and position the placeholder */
+.custom-placeholder::placeholder {
+  padding-left: 8px;  /* Push the placeholder to the right */
+  color: #888;        /* Optional: change placeholder color */
+  opacity: 1;         /* Make sure it's fully visible */
+}
+.user-3{
+  height: 35px;
+  font-size: 13px;
+  border-start-start-radius: 5px;
+  border-end-start-radius: 5px;
+}
+.custom-card {
+  background: #f7fafd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: none;
+  width: fit-content;
+}
+
+.p-togglebutton,
+.select-button .p-button {
+  background-color: #f0f4f9;
+  border: none;
+  color: #2c3e50;
+  font-weight: 500;
+  min-width: 80px;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+}
+
+
+
+
+
+
+
 
 
 

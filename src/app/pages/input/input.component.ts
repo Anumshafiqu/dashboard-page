@@ -37,13 +37,14 @@ interface City {
     CalendarModule , FormsModule , ReactiveFormsModule , CardModule , IconFieldModule , InputIconModule , AutoCompleteModule ,
    InputNumberModule , RadioButtonModule , ToggleButtonModule , InputSwitchModule , ListboxModule , MultiSelectModule,
    TreeSelectModule , SelectButtonModule , SliderModule , RatingModule , ColorPickerModule , KnobModule, InputGroupAddonModule , InputGroupModule , InputTextModule,
-    InputGroupModule, CommonModule
+    InputGroupModule, CommonModule , 
   ],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css' ,
 })
 export class InputComponent {
     value2 : number  = 50;
+    confirmText: string = '';
     value3: number  = 5;
       color: string | undefined;
     formGroup: FormGroup | undefined;
@@ -107,7 +108,15 @@ countries: string[] = [
   // ... (continue with all countries from your list)
   'Zambia', 'Zimbabwe'
 ];
+toggleValue: boolean = false;
 
+options = [
+  { label: 'Option 1', value: 1 },
+  { label: 'Option 2', value: 2 },
+  { label: 'Option 3', value: 3 }
+];
+
+selectedOption: number = 1;
 // Filters countries when typing
 filterCountries(event: any) {
   const query = event.query.toLowerCase();
