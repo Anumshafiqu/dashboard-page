@@ -8,6 +8,7 @@ import { TableComponent } from './pages/table/table.component';
 import { ButtonComponent } from './pages/button/button.component';
 import { InputComponent } from './pages/input/input.component';
 import { TreeComponent } from './pages/tree/tree.component';
+import { TreetableComponent } from './pages/treetable/treetable.component';
 
 export const routes: Routes = [
     {path : '', component : MainComponent , children :[
@@ -19,7 +20,9 @@ export const routes: Routes = [
         {path : 'table' , component : TableComponent},
         {path : 'button' , component : ButtonComponent},
         {path :'input' , component : InputComponent},
-        {path :'tree' , component : TreeComponent}
+        {path :'tree' , component : TreeComponent},
+        {path : 'treetable' , component : TreetableComponent}
+
         
         
     ]}

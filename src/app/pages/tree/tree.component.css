@@ -1,0 +1,45 @@
+::ng-deep .p-tree .p-treenode .p-checkbox {
+  width: 17px;
+  height: 17px;
+}
+
+::ng-deep .p-tree .p-treenode .p-checkbox-box {
+  width: 100%;
+  height: 100%;
+  font-size: 14px; /* Adjust check icon size */
+}
+
+::ng-deep .p-tree .p-treenode-icon,
+::ng-deep .p-tree-toggler-icon,
+::ng-deep .p-tree .pi {
+  font-size: 14px; /* Controls node and toggler icon size */
+}
+
+/* Optional: adjust label font size */
+::ng-deep .p-tree .p-treenode-label {
+  font-size: 14px;
+  padding-left: 0 !important;
+}
+/* Adjust the arrow (toggle) size */
+
+
+/* Adjust the arrow icon (usually a chevron or caret) */
+::ng-deep .p-tree-toggler-icon {
+  font-size: 10px; /* increase or decrease arrow size */
+}
+/* Make sure to target PrimeNG's internal toggle icon */
+::ng-deep .p-tree-toggler-icon {
+  font-size: 10px !important;  /* Try smaller size: 1rem, 0.9rem */
+  line-height: 30px !important;
+}
+
+/* Optional: shrink the toggle area around the icon */
+/* ::ng-deep .p-tree-toggler {
+  width: 12px !important;
+  height: 12px !important;
+  margin-right: 10px;
+} */
+ ::ng-deep .p-checkbox {
+  transform: scale(0.8); /* reduce checkbox size */
+}
+

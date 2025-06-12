@@ -1,0 +1,38 @@
+<div class="card mx-2 border-0 mt-4 p-2">
+  <p-treeTable
+    [value]="files"
+    [columns]="cols"
+    selectionMode="checkbox"
+    [(selectionKeys)]="selectionKeys"
+    dataKey="key"
+    [scrollable]="true"
+    [tableStyle]="{ 'min-width': '50rem' }"
+    class="text-xs fw-medium"
+  >
+    <!-- Header -->
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns" class="bg-white">
+          {{ col.header }}
+        </th>
+      </tr>
+    </ng-template>
+
+    <!-- Body -->
+    <ng-template pTemplate="body" let-rowNode let-rowData="rowData" let-columns="columns">
+      <tr [ttRow]="rowNode" [ttSelectableRow]="rowNode">
+        <td *ngFor="let col of columns; let i = index">
+          <!-- Show toggler and checkbox automatically in the first column -->
+          <ng-container *ngIf="i === 0">
+            <p-treeTableToggler [rowNode]="rowNode" />
+            <p-treeTableCheckbox [value]="rowNode" />
+            {{ rowData[col.field] }}
+          </ng-container>
+          <ng-container *ngIf="i !== 0">
+            {{ rowData[col.field] }}
+          </ng-container>
+        </td>
+      </tr>
+    </ng-template>
+  </p-treeTable>
+</div>
