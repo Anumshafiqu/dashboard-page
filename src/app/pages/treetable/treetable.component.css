@@ -52,6 +52,7 @@
 
 /* Optional: tighter row spacing */
 ::ng-deep .p-treetable .p-treetable-tbody > tr > td {
-  padding: 0.5rem 0.75rem;
+  padding: 7px 0.75rem;
+  border-bottom: 1px solid lavender;
 }
 

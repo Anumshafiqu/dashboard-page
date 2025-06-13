@@ -1,0 +1,111 @@
+::ng-deep .custom-card-toolbar .p-toolbar {
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+}
+
+::ng-deep .custom-card-toolbar .search-bar {
+  width: 200px;
+  margin: 0 auto;
+}
+
+::ng-deep .custom-card-toolbar .p-inputtext {
+  width: 100%;
+}
+
+::ng-deep .p-toolbar .p-button {
+  font-size: 13px;
+}
+input::placeholder{
+    margin-left: 50px !important;
+    font-size: 13px;
+}
+::ng-deep .custom-card-toolbar .search-bar {
+  width: 200px;
+  margin-left: 50px; /* Adjust left margin */
+}
+
+/* Style the input placeholder */
+::ng-deep .custom-card-toolbar .custom-input::placeholder {
+  font-size: 13px;
+
+}
+
+/* Optional: control overall input spacing */
+::ng-deep .custom-card-toolbar .custom-input {
+  padding-left: 30px; /* so the icon doesn't overlap text */
+  font-size: 12px;
+}
+::ng-deep .custom-split-button {
+  display: inline-flex;
+  /* overflow: hidden; */
+  border-radius: 6px;
+}
+
+::ng-deep .custom-split-button .p-button {
+  border-radius: 0;
+}
+
+/* Left button - main action */
+::ng-deep .custom-split-button .p-splitbutton-defaultbutton {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+/* Right button - dropdown icon */
+::ng-deep .custom-split-button .p-splitbutton-menubutton {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* Dropdown panel menu item bottom borders */
+::ng-deep .p-menu .p-menuitem:not(:last-child) {
+  border-bottom: 1px solid #dcdcdc; /* subtle bottom border */
+}
+
+/* Optional: add hover effect */
+::ng-deep .p-menu .p-menuitem:hover {
+  background-color: #f4f4f4;
+}
+/* Remove dropdown menu padding */
+::ng-deep .p-menu {
+  padding: 0 !important;
+}
+
+/* Remove padding inside each menu item */
+::ng-deep .p-menu .p-menuitem {
+  padding: 0 !important;
+}
+
+/* Remove bottom border between menu items */
+::ng-deep .p-menu .p-menuitem:not(:last-child) {
+  border-bottom: none !important;
+}
+::ng-deep {
+  .p-accordion .p-accordion-header {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .p-panel, .p-fieldset, .p-tabview {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+  }
+
+  .p-divider {
+    margin: 0 2rem;
+  }
+
+  .gap-2 > * {
+    margin-left: 0.5rem;
+  }
+}
+
+
