@@ -1,27 +1,224 @@
-
-
 <div class="card mt-7 py-3 mx-3 border-0">
-    <p class="fw-medium ml-3">ToolBar</p>
+  <p class="fw-medium ml-3">ToolBar</p>
 
-<div class="card custom-card-toolbar mx-3">
-  <p-toolbar>
-    <ng-template pTemplate="left">
-      <button pButton icon="pi pi-plus" class="p-button-text p-button-sm text-dark"></button>
-      <button pButton icon="pi pi-table" class="p-button-text p-button-sm text-dark"></button>
-      <button pButton icon="pi pi-download" class="p-button-text p-button-sm text-dark"></button>
+  <div class="card custom-card-toolbar mx-3">
+    <p-toolbar>
+      <ng-template pTemplate="left">
+        <button pButton icon="pi pi-plus" class="p-button-text p-button-sm text-dark"></button>
+        <button pButton icon="pi pi-table" class="p-button-text p-button-sm text-dark"></button>
+        <button pButton icon="pi pi-download" class="p-button-text p-button-sm text-dark"></button>
+      </ng-template>
+
+      <ng-template pTemplate="center">
+        <span class="p-input-icon-left search-bar">
+          <i class="pi pi-search text-sm"></i>
+          <input pInputText type="text" placeholder="Search" class="custom-input form-control" />
+        </span>
+      </ng-template>
+      <ng-template pTemplate="right">
+      </ng-template>
+    </p-toolbar>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="p-grid row mx-1">
+  <!-- Left Side -->
+  <div class="col-6 mt-5">
+    <p-card>
+      <p class="fw-medium ml-3 py-2 pb-0">Accordion</p>
+      <p-accordion [activeIndex]="0">
+        <p-accordionTab header="Header I" class="">
+          <p class="mx-2 py-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.</p>
+        </p-accordionTab>
+        <p-accordionTab header="Header II">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+        </p-accordionTab>
+        <p-accordionTab header="Header III">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+        </p-accordionTab>
+      </p-accordion>
+    </p-card>
+    <!-- Vertical Grid Card -->
+    <div class="col-12 mt-3">
+      <p-card>
+        <p class="fw-medium ml-2">Tabs</p>
+        <div class="custom-tabs">
+          <p-tabView [activeIndex]="0">
+            <p-tabPanel header="Header I">
+              <p class="ml-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit
+                anim id est laborum.
+              </p>
+            </p-tabPanel>
+            <p-tabPanel header="Header II">
+              <p class="ml-2">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo.
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam
+                eius
+                modi.
+              </p>
+            </p-tabPanel>
+            <p-tabPanel header="Header III">
+              <p class="ml-2 fw-medium">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                deleniti
+                atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                similique
+                sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
+                facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                impedit quo minus.
+              </p>
+            </p-tabPanel>
+          </p-tabView>
+        </div>
+      </p-card>
+    </div>
+  </div>
+  <!-- Right Side -->
+  <div class="col-6 mt-5">
+    <p-card>
+      <p class="fw-medium ml-3 pb-0 mt-0">Panel</p>
+      <p-panel header="Header" [toggleable]="true" [transitionOptions]="'400ms cubic-bezier(0.4, 0, 0.2, 1)'">
+        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.</p>
+
+      </p-panel>
+    </p-card>
+    <!-- Inline Card -->
+    <div class="col-12 mt-3">
+      <p-card class="mt-3">
+        <div class="custom-fieldset">
+          <p-fieldset legend="Legend" [toggleable]="true" class="custom-fieldset text-left">
+            <p class="m-0 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </p-fieldset>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</div>
+<div class="row p-grid mx-2">
+  <p-card class="">
+    <div class="flex flex-col md:flex-row">
+      <p class="ml-4 mt-3 py-2 pb-0 fw-medium">Divider</p>
+      <!-- Left side: Login form -->
+      <div class="w-full md:w-1/2 flex flex-col items-center justify-center gap-4 px-4">
+        <div class="w-full max-w-sm">
+          <div class="">
+            <label for="username" class="text-xs fw-medium text-gray-700">Username</label><br>
+            <input pInputText id="username" type="text" class="form-control w-12rem p-1 mt-1" />
+          </div>
+
+          <div class="mt-1">
+            <label for="password" class="text-xs fw-medium">Password</label>
+            <input pInputText id="password" type="password" class="form-control w-12rem p-1 mt-1" />
+          </div>
+          <p-button label="Login" icon="pi pi-user" iconPos="left" class="custom-button w-10rem p-0 px-0"
+            styleClass="text-left" />
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="flex items-center justify-center px-3 py-5 w-full md:w-auto">
+        <!-- Vertical divider on md+ -->
+        <p-divider layout="vertical" class="hidden md:flex">
+          <b>OR</b>
+        </p-divider>
+        <!-- Horizontal divider on small -->
+        <p-divider layout="horizontal" class="flex md:hidden my-4">
+          <b>OR</b>
+        </p-divider>
+      </div>
+
+      <!-- Right side: Sign Up -->
+      <div class="w-full md:w-1/2 flex items-center justify-center py-5">
+        <div class="w-full md:w-5/12 flex items-center justify-center py-5">
+          <p-button label="Sign Up" icon="pi pi-user" severity="success" class="signup-btn w-15rem"
+            styleClass="w-full mx-auto" />
+        </div>
+      </div>
+
+    </div>
+  </p-card>
+</div>
+
+
+
+<div class="p-grid row mx-2 mt-4">
+  <p-card>
+<!-- splitter.component.html -->
+<div class="py-3">
+  <p-splitter [style]="{ height: '300px' }" [panelSizes]="[20, 80]" [minSizes]="[10, 0]" styleClass="mb-8">
+    <!-- Panel 1 -->
+    <ng-template pTemplate="panel">
+      <div class="flex items-center justify-center h-full border-right mt-4 text-center ml-4 text-sm">Panel 1</div>
     </ng-template>
 
-  <ng-template pTemplate="center">
-  <span class="p-input-icon-left search-bar">
-    <i class="pi pi-search text-sm"></i>
-    <input pInputText type="text" placeholder="Search" class="custom-input form-control" />
-  </span>
-</ng-template>
-<ng-template pTemplate="right">
+    <!-- Panel 2 (Vertical Splitter) -->
+    <ng-template pTemplate="panel">
+      <p-splitter layout="vertical" [panelSizes]="[50, 50]">
+        <!-- Panel 2 Top -->
+        <ng-template pTemplate="panel" class="text-center">
+          <div class="border-bottom mt-4 text-center ml-4 text-sm">Panel 2</div>
+        </ng-template>
 
-</ng-template>
-  </p-toolbar>
+        <!-- Panel 2 Bottom (Horizontal Splitter) -->
+        <ng-template pTemplate="panel">
+          <p-splitter [panelSizes]="[20, 80]">
+            <!-- Panel 3 -->
+            <ng-template pTemplate="panel">
+              <div class=" border-right mt-4 text-center ml-4 text-sm">Panel 3</div>
+            </ng-template>
+
+            <!-- Panel 4 -->
+            <ng-template pTemplate="panel">
+              <div class="mt-4 text-center ml-4 text-sm">Panel 4</div>
+            </ng-template>
+          </p-splitter>
+        </ng-template>
+      </p-splitter>
+    </ng-template>
+  </p-splitter>
 </div>
+
+  </p-card>
 </div>
-
-

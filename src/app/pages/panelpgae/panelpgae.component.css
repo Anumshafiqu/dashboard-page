@@ -1,3 +1,4 @@
+
 ::ng-deep .custom-card-toolbar .p-toolbar {
   justify-content: space-between;
   padding: 0.5rem;
@@ -107,5 +108,215 @@ input::placeholder{
     margin-left: 0.5rem;
   }
 }
+
+
+.p-accordion .p-accordion-content {
+  /* transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
+  overflow: hidden;
+}
+
+::ng-deep p-accordion p-accordion-header {
+  background-color: white !important;
+  font-size: 16px !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+::ng-deep .p-accordion .p-accordion-header a {
+  text-decoration: none !important;
+  color: #333;
+}
+
+::ng-deep .p-accordion .p-accordion-content {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+::ng-deep .p-accordion .p-accordion-header {
+  background-color: transparent !important;  /* make it fully transparent */
+  border: none !important;
+  box-shadow: none !important;
+}
+p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::ng-deep .p-accordion .p-accordion-header a {
+  background-color: white !important;  /* force inner anchor background to white */
+  text-decoration: none !important;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  border: none !important;
+}
+/*  */
+
+::ng-deep .p-accordion .p-accordion-toggle-icon {
+  order: 2; 
+  margin-left: auto;
+}
+::ng-deep .p-accordion .p-accordion-content p {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 13px;
+
+}
+::ng-deep .p-accordion .p-accordion-content p {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.col-6 {
+  margin-bottom: 1rem;
+}
+::ng-deep .p-panel .p-panel-header {
+  background-color: transparent !important; /* remove background */
+  font-size: 13px !important;              /* adjust font size */
+  text-decoration: none !important;        /* remove underline or decorations */
+  font-weight: 500;                        /* optional: medium weight */
+  padding: 0 !important;                   /* optional: adjust spacing */
+  border: none !important;                 /* optional: remove border */
+  box-shadow: none !important;  
+  margin-left: 20px;
+}
+::ng-deep .p-panel {
+  border: none !important;           /* remove outer border */
+  box-shadow: none !important;       /* remove any shadows */
+}
+::ng-deep .p-panel .p-panel-content {
+  border: none !important;           /* remove content border */
+  padding: 1rem 1.25rem;        
+}
+
+::ng-deep .custom-tabs .p-tabview-nav li .p-tabview-nav-link {
+  font-size: 14px !important;
+  text-decoration: none !important;
+}
+
+::ng-deep .custom-tabs .p-tabview-nav {
+  border: none !important;
+}
+
+::ng-deep .custom-tabs .p-tabview-nav-link {
+  /* border: none !important; */
+  background: transparent !important;
+}
+
+::ng-deep .custom-tabs .p-tabview-panels {
+  font-size: 13px;
+  padding-top: 0.75rem;
+}
+::ng-deep .custom-tabs .p-tabview-nav li .p-tabview-nav-link {
+  font-size: 14px !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+   margin-left: 0 !important;
+}
+
+
+::ng-deep .custom-tabs .p-tabview-nav-link {
+  font-size: 14px !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  padding: 0.5rem 1rem;
+  transition: border-bottom 0.3s ease;
+}
+::ng-deep .custom-fieldset .p-fieldset {
+  border: 1px solid #ccc !important;
+  padding-top: 1.5rem;
+  position: relative;
+  border-radius: 6px;
+  background: transparent !important;
+}
+
+::ng-deep .custom-fieldset .p-fieldset-legend {
+  position: absolute;
+  top: -0.75rem;
+  left: 1rem;
+  background: white !important; /* Match your card background */
+  padding: 0 0.5rem;
+  font-size: 16px !important;
+  font-weight: 600;
+  border: none !important;
+  color: #333;
+}
+::ng-deep .custom-fieldset .p-fieldset {
+  border: 1px solid #ccc !important;         /* Add border around fieldset */
+  padding-top: 1.5rem;
+  position: relative;
+  border-radius: 6px;
+  background: transparent !important;
+}
+::ng-deep .custom-fieldset .p-fieldset-legend {
+  justify-content: flex-start !important; /* Align text to the left */
+  /* padding: 0 0.5rem; */
+  font-size: 14px;
+  font-weight: 500;
+  background: white !important;
+  border: none !important; /* Remove border from the legend text */
+  text-decoration: none ;
+}
+::ng-deep .custom-button .p-button {
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  text-align: left;
+  margin-top: 10px;
+}
+
+::ng-deep .custom-button .p-button .p-button-icon-left {
+  margin-right: 0;
+}
+
+::ng-deep .custom-button .p-button .pi {
+  font-size: 11px;
+}
+::ng-deep .signup-btn .p-button {
+  border-radius: 8px;
+  padding: 5px 5px;
+  margin-top: 20px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center icon + text together */
+  gap: 0.5rem;
+}
+
+/* Optional: Adjust icon spacing */
+::ng-deep .signup-btn .p-button-icon-left {
+  margin-right: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

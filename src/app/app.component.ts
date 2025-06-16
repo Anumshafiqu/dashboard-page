@@ -7,7 +7,8 @@ import { TableComponent } from './pages/table/table.component';
   selector: 'app-root',
   imports: [RouterOutlet ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  standalone :true,
 })
 export class AppComponent {
   title = 'dashboard';

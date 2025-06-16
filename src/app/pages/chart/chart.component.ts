@@ -7,7 +7,8 @@ import { ChartModule } from 'primeng/chart';
   selector: 'app-chart',
   imports: [ChartModule ,HttpClientModule],
   templateUrl: './chart.component.html',
-  styleUrl: './chart.component.css'
+  styleUrl: './chart.component.css',
+  standalone:true,
 })
 export class ChartComponent {
   // data: any;

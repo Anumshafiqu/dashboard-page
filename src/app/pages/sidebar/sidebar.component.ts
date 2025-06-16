@@ -26,7 +26,9 @@ import { RouterLink } from '@angular/router';
         animate('400ms ease-out', style({ opacity: 0 }))
       ])
     ])
-  ]
+  ],
+  
+  standalone:true,
 
 })
 export class SidebarComponent {

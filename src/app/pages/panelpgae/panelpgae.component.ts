@@ -9,12 +9,13 @@ import { TabViewModule } from 'primeng/tabview';
 import { ButtonModule } from 'primeng/button';
 import { DividerModule } from 'primeng/divider';
 import { SplitterModule } from 'primeng/splitter';
+import { Card, CardModule } from 'primeng/card';
 
 
 @Component({
   selector: 'app-panelpgae',
   imports: [SplitButtonModule , ToolbarModule , AccordionModule , PanelModule , FieldsetModule , TabViewModule , ButtonModule ,
-    DividerModule , SplitterModule ,
+    DividerModule , SplitterModule , CardModule
   ],
   templateUrl: './panelpgae.component.html',
   styleUrl: './panelpgae.component.css',

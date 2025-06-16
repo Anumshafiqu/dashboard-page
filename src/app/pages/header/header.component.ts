@@ -8,7 +8,8 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
   selector: 'app-header',
   imports: [ MenubarModule, ButtonModule , AvatarModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
+  standalone : true,
 })
 export class HeaderComponent {
   // @Output() toggleSidebar = new EventEmitter<void>();

@@ -6,7 +6,8 @@ import { DropdownModule } from 'primeng/dropdown';
   selector: 'app-formslayout',
   imports: [CardModule , DropdownModule],
   templateUrl: './formslayout.component.html',
-  styleUrl: './formslayout.component.css'
+  styleUrl: './formslayout.component.css',
+  standalone : true,
 })
 export class FormslayoutComponent {
   states = [

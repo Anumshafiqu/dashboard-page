@@ -9,9 +9,10 @@ import { FormslayoutComponent } from '../formslayout/formslayout.component';
 
 @Component({
   selector: 'app-main',
-  imports: [HeaderComponent , SidebarComponent , NgIf , RouterOutlet],
+  imports: [ HeaderComponent , SidebarComponent ,  NgIf , RouterOutlet],
   templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+  styleUrl: './main.component.css',
+  standalone:true,
 })
 export class MainComponent {
   isSidebarVisible = true;

@@ -18,6 +18,7 @@ import { HttpClient } from '@angular/common/http';
   imports: [CardModule ,  NgClass ,  NgFor, ChartModule,
      ChartComponent, SidebarModule , TableModule , ProgressBarModule , PaginatorModule],
   templateUrl: './home.component.html',
+  standalone:true,
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
