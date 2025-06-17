@@ -10,6 +10,7 @@ import { InputComponent } from './pages/input/input.component';
 import { TreeComponent } from './pages/tree/tree.component';
 import { TreetableComponent } from './pages/treetable/treetable.component';
 import { PanelpgaeComponent } from './pages/panelpgae/panelpgae.component';
+import { MediaComponent } from './pages/media/media.component';
 
 export const routes: Routes = [
     {path : '', component : MainComponent , children :[
@@ -23,7 +24,8 @@ export const routes: Routes = [
         {path :'input' , component : InputComponent},
         {path :'tree' , component : TreeComponent},
         {path : 'treetable' , component : TreetableComponent},
-        {path : 'panelpgae' , component : PanelpgaeComponent}
+        {path : 'panelpgae' , component : PanelpgaeComponent},
+        {path : 'media' , component : MediaComponent}
 
 
         

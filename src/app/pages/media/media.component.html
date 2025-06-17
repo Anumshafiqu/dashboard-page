@@ -1,0 +1,91 @@
+<div class="p-4 bg-[#f4f7fa] min-h-screen">
+    <!-- Carousel -->
+    <div class="card mt-5 border-0 shadow-none py-5" style="width: 100%;">
+        <p class="mt-0 fw-medium ml-3">Carousel</p>
+        <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false" [showIndicators]="true"
+            [showNavigators]="true" [responsiveOptions]="responsiveOptions">
+
+            <ng-template let-product pTemplate="item">
+                <div class="carousel-card p-3 card mt-4 mx-2">
+                    <img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image"
+                        [alt]="product.name" class="product-image" />
+                    <p class="product-name text-sm text-left">{{ product.name }}</p>
+                    <div class="bottom-row">
+                        <span class="product-price text-sm">${{ product.price }}</span>
+                        <div class="action-buttons">
+                            <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" styleClass="p-button-sm p-button-rounded 
+                        p-0 custom-button
+                        " />
+                            <p-button icon="pi pi-shopping-cart"
+                                styleClass="p-button-sm p-button-rounded p-0 custom-button" />
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+
+
+
+
+    <!-- Image Section -->
+    <div class="card mb-6 shadow-sm mt-4 border-0">
+        <p class="text-lg font-semibold mt-3 ml-5">Image</p>
+        <p-image src="https://primefaces.org/cdn/primeng/images/galleria/galleria10.jpg" alt="City" width="250"
+            class="m-5 mt-0"></p-image>
+    </div>
+
+    <!-- Galleria -->
+     <!-- <div class="card shadow-sm">
+        <h5 class="text-lg font-semibold mb-4">Galleria</h5>
+        <p-galleria [value]="galleriaImages" [responsiveOptions]="galleriaResponsive" [showThumbnails]="true"
+            [numVisible]="5" [circular]="true" [autoPlay]="true" [transitionInterval]="5000" [showIndicators]="false"
+            containerStyleClass="shadow-md rounded-md">
+
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.itemImageSrc" class="w-50 ml-0 h-[400px] object-cover rounded-lg" />
+            </ng-template>
+            <ng-template pTemplate="thumbnail" let-item class="w-30rem ml-0">
+                <img [src]="item.thumbnailImageSrc"
+                    class="w-100 h-[60px] rounded-md opacity-70 hover:opacity-100 transition-opacity duration-300" />
+            </ng-template>
+        </p-galleria>
+    </div>  -->
+
+
+<p-card>
+    <div class="shadow-sm bg-white rounded-md w-75">
+  <p-galleria 
+     [value]="galleriaImages"
+    [showThumbnails]="true"
+    
+    [circular]="true"
+    [autoPlay]="false"
+    [transitionInterval]="3000"
+    [numVisible]="6"
+class="max-width: 800px; margin: auto">
+
+    <!-- Main Image -->
+    <ng-template pTemplate="item" let-item class="mt-2">
+      <img [src]="item.itemImageSrc" class="main-image w-100" />
+    </ng-template>
+
+    <!-- Thumbnails -->
+    <ng-template pTemplate="thumbnail" let-item class="thumbnail-images mt-2">
+      <img [src]="item.thumbnailImageSrc" class="thumbnail-image" />
+    </ng-template>
+
+  </p-galleria>
+</div>
+</p-card>
+
+
+
+
+
+
+
+
+
+
+</div>
