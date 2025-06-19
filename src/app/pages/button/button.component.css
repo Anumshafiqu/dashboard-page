@@ -12,12 +12,12 @@ p {
 
 .custom-button-1 ::ng-deep .p-button {
     border-radius: 5px !important;
-    font-size: 14px;
+    font-size: 13px;
     padding: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     /* color: beige; */
 }
 
@@ -29,7 +29,7 @@ p {
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     /* color: beige; */
 }
 
@@ -39,19 +39,19 @@ p {
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     /* color: beige; */
 }
 
 .custom-button-group-right ::ng-deep .p-button {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    font-size: 14px;
+    font-size: 13px;
     padding: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     /* color: beige; */
 }
 
@@ -188,7 +188,7 @@ p {
 
 ::ng-deep .custom-svg-button .p-button {
     padding: 0.5rem !important;
-    border-radius: 0.5rem !important;
+    border-radius: 8px !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,7 +203,7 @@ p {
 }
 
 ::ng-deep .custom-svg-button .svg-icon svg {
-    width: 1.5rem;
+    width: 1.1rem;
     height: 1.5rem;
 }
 
@@ -214,13 +214,13 @@ p {
 
 
 .custom-button-raised ::ng-deep .p-button {
-    border-radius: 20px !important;
-    font-size: 14px;
+    border-radius: 25px !important;
+    font-size: 13px;
     padding: 10px;
-    padding-top: 5px;
+    padding-top: 4px;
     padding-bottom: 5px;
     margin-top: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     /* color: beige; */
 }
 

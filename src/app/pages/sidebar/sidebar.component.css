@@ -5,13 +5,15 @@
     } */
 
     .side-links{
-        /* font-family:'Franklin Gothic Medium', ; */
-        /* color: gray; */
+        /* font-family: serif ; */
+        color: gray;
         padding: 10px;
+        font-size: 13px;
     }
     .side-links-1{
         font-size: 13px;
         color: black;
+
     }
 
 

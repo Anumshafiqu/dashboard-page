@@ -11,6 +11,7 @@ import { TreeComponent } from './pages/tree/tree.component';
 import { TreetableComponent } from './pages/treetable/treetable.component';
 import { PanelpgaeComponent } from './pages/panelpgae/panelpgae.component';
 import { MediaComponent } from './pages/media/media.component';
+import { OverlayPageComponent } from './pages/overlay-page/overlay-page.component';
 
 export const routes: Routes = [
     {path : '', component : MainComponent , children :[
@@ -25,7 +26,8 @@ export const routes: Routes = [
         {path :'tree' , component : TreeComponent},
         {path : 'treetable' , component : TreetableComponent},
         {path : 'panelpgae' , component : PanelpgaeComponent},
-        {path : 'media' , component : MediaComponent}
+        {path : 'media' , component : MediaComponent},
+        {path : 'overlay-page' , component : OverlayPageComponent}
 
 
         

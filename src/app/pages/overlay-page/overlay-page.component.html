@@ -1,0 +1,148 @@
+<div class="p-grid row mx-3">
+
+    <!-- Left Column: Dialog -->
+    <div class="col-6 mt-7 mb-0">
+        <p-card>
+            <p class="fw-medium mb-3">Dialog</p>
+
+            <button pButton label="Show" (click)="display = true"
+                class="w-3rem text-xs h-2rem p-button-success p-0 rounded px-0"></button>
+
+            <p-dialog header="Dialog" [(visible)]="display" [modal]="true" [style]="{width: '400px', height: '380px'}"
+                [baseZIndex]="10000" [draggable]="false" [dismissableMask]="true"
+                styleClass="custom-dialog-style text-sm">
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+
+                <ng-template pTemplate="footer">
+                    <button pButton label="Save" (click)="display = false"
+                        class="w-3rem text-xs h-2rem p-button-success rounded p-0 px-0"></button>
+                </ng-template>
+            </p-dialog>
+        </p-card>
+    </div>
+
+    <!-- Right Column: Drawer -->
+    <div class="col-12 md:col-6 mt-7">
+        <p-card>
+            <p class="fw-medium mt-0">Drawer</p>
+            <div class="flex gap-2">
+                <button pButton icon="pi pi-arrow-right"
+                    class="w-2rem text-xs h-2rem p-button-success p-0 rounded px-0 p-button-success btn-sm"
+                    (click)="openDrawer('right')"></button>
+                <button pButton icon="pi pi-arrow-left"
+                    class="w-2rem text-xs h-2rem p-button-success p-0 rounded px-0 p-button-success btn-sm"
+                    (click)="openDrawer('left')"></button>
+                <button pButton icon="pi pi-arrow-up"
+                    class="w-2rem text-xs h-2rem p-button-success p-0 rounded px-0 p-button-success btn-sm"
+                    (click)="openDrawer('top')"></button>
+                <button pButton icon="pi pi-arrow-down"
+                    class=" w-2rem text-xs h-2rem p-button-success p-0 rounded px-0 icon-btn-sm btn-sm"
+                    (click)="openDrawer('bottom')"></button>
+                <button pButton icon="pi pi-window-maximize"
+                    class=" w-2rem text-xs h-2rem p-button-success p-0 rounded px-0 icon-btn-sm btn-sm"
+                    (click)="openDrawer('bottom')"></button>
+            </div>
+
+            <p-sidebar [(visible)]="drawerVisible" [position]="drawerPosition" [baseZIndex]="10000"
+                styleClass="custom-drawer">
+                <p class="mb-3 capitalize">{{ drawerPosition }} Drawer</p>
+                <p class="mb-4 text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+                <p-dialog header="Inner Dialog" [(visible)]="showDialog" [modal]="true" [style]="{width: '300px'}"
+                    [dismissableMask]="true">
+                    <p>This is a dialog inside the drawer.</p>
+                </p-dialog>
+            </p-sidebar>
+        </p-card>
+    </div>
+</div>
+
+
+<div class="p-grid row mx-3">
+    <div class="col-6 mb-0">
+        <p-card>
+            <p>Popover</p>
+            <!-- Show Popover Button -->
+            <button type="button" pButton label="Show" class="p-button-success text-xs p-0 w-3rem h-2rem px-0 rounded"
+                (click)="salesPanel.toggle($event)">
+            </button>
+
+            <!-- Popover with Table -->
+            <p-overlayPanel #salesPanel [dismissable]="true" [showCloseIcon]="true" [style]="{width: '500px'}"
+                styleClass="p-0">
+
+                <div class="p-3">
+
+                    <p-table [value]="products" [paginator]="true" [rows]="5" responsiveLayout="scroll"
+                        class="rounded font-medium text-xs">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>Image</th>
+                                <th>Name <i class="pi pi-sort-alt"></i></th>
+                                <th>Price <i class="pi pi-sort-alt"></i></th>
+                                <th>View</th>
+                            </tr>
+                        </ng-template>
+
+                        <ng-template pTemplate="body" let-product>
+                            <tr>
+                                <td class="text-sm">
+                                    <img [src]="product.image" alt="{{ product.name }}" width="40" />
+                                </td>
+                                <td class="text-sm">{{ product.name }}</td>
+                                <td class="text-sm">${{ product.price }}</td>
+                                <td class="text-sm">
+                                    <i class="pi pi-search cursor-pointer"></i>
+                                </td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+
+            </p-overlayPanel>
+
+        </p-card>
+
+    </div>
+    <div class="col-6 mb-0">
+        <!-- <p-card>
+            <p>ConfirmPopup</p>
+            <button type="button" pButton label="Show" icon="pi pi-check" class="p-button-success text-xs p-0 w-5rem h-2rem  rounded"
+                (click)="salesPanel.toggle($event)">
+            </button>
+        </p-card> -->
+        <p-card>
+            <p>ConfirmPopup</p>
+            <button type="button" pButton label="Show" icon="pi pi-check"
+                class="p-button-success text-xs p-0 w-5rem h-2rem rounded custom-icon-button"
+                (click)="salesPanel.toggle($event)">
+            </button>
+        </p-card>
+    </div>
+</div>
+
+<div class="p-grid row mx-3">
+    <div class="col-6 mb-0">
+        <p-card>
+            <p class="fw-medium">Tooltip</p>
+            <div class="flex gap-3 align-items-center">
+                <!-- Input with right-side tooltip -->
+                <input type="text" pInputText pTooltip="Enter your username" tooltipEvent="focus"
+                    class="form-control w-13rem p-1">
+                <!-- Button with tooltip on right -->
+                <button pButton label="Save" pTooltip="Click to proceed" tooltipPosition="right"
+                    class="p-button-success text-xs h-2rem w-3rem p-2 rounded ">
+                </button>
+
+            </div>
+
+        </p-card>
+    </div>
+</div>

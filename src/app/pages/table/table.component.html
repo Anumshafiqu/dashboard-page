@@ -399,8 +399,8 @@
         scrollDirection="horizontal" class="w-full border">
         <ng-template pTemplate="caption">
             <div class="flex align-items-center justify-content-between">
-                <p-button label="Clear" icon="pi pi-filter-slash" (click)="dt.clear()" outlined="true" class="text-sm
-                btn button-1" severity="success" variant="outlined"></p-button>
+                <p-button label="Clear"  icon="pi pi-filter-slash" (click)="dt.clear()" outlined="true" class="text-sm
+                custom-clear-button p-0" severity="success" variant="outlined"></p-button>
                 <span class="p-input-icon-left text-sm">
                     <!-- <i class="pi pi-search text-sm"></i> -->
                     <input pInputText type="text" (input)="dt.filterGlobal($event.target, 'contains')"

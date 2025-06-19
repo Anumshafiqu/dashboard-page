@@ -56,7 +56,7 @@ th ,td ,tr{
 .info {
   background-color: #17a2b8; /* blue */
 }
-.button-1{
+::ng-deep .button-1{
   padding: 8px;
   border-radius: 20px;
 }
@@ -75,7 +75,104 @@ p-table tr > th {
     border: none !important;
     padding: 8px !important;
 }
-/* .tablecolor{
-   background-color: rgb(243, 243, 255);
-   height: 300vh;
-} */
+/* Clear Button Custom Radius and Padding */
+::ng-deep .custom-clear-button button {
+  border-radius: 8px !important;  /* rounded corners */
+  padding: 6px 7px!important;
+  font-size: 13px;
+}
+
+/* Pagination Buttons Border Radius */
+::ng-deep .p-paginator .p-paginator-pages .p-paginator-page {
+  border-radius: 6px !important;
+  padding: 8px !important;
+}
+::ng-deep .p-paginator .p-paginator-page.p-highlight{
+  border-radius: 25px !important;
+  padding: 0px;
+}
+
+/* Active pagination page style (optional) */
+::ng-deep .p-paginator .p-paginator-page.p-highlight:hover{
+  border-radius: 25px !important;
+  padding: 0px;
+}
+/* General pagination button style */
+::ng-deep .p-paginator .p-paginator-pages .p-paginator-page {
+  border-radius: 6px !important;
+  padding: 0 !important;              /* Remove inner padding */
+  min-width: 32px !important;         /* Ensure square button */
+  height: 32px !important;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Highlighted (active) page */
+::ng-deep .p-paginator .p-paginator-page.p-highlight {
+  border-radius: 25px !important;
+}
+
+/* Hover effect for highlighted */
+::ng-deep .p-paginator .p-paginator-page.p-highlight:hover {
+  background-color: #16a34a !important; /* darker green */
+  color: white !important;
+}
+
+/* Hover effect for all pages */
+::ng-deep .p-paginator .p-paginator-page:hover {
+  background-color: #e5e7eb !important; /* light gray on hover */
+  color: black !important;
+  border-radius: 25px !important;
+}
+/* === Paginator Buttons (page numbers like 1, 2, 3) === */
+::ng-deep .p-paginator .p-paginator-page {
+  padding: 0 !important;
+  min-width: 32px !important;
+  height: 32px !important;
+  font-size: 13px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Active page button */
+::ng-deep .p-paginator .p-paginator-page.p-highlight {
+  background-color: #22c55e !important; /* green */
+  color: white !important;
+  border-radius: 20px !important;
+}
+
+/* Hover effect on page buttons */
+::ng-deep .p-paginator .p-paginator-page:hover {
+  background-color: #e5e7eb !important;
+  border-radius: 20px !important;
+}
+
+/* === RowsPerPage Dropdown === */
+::ng-deep .p-paginator .p-dropdown {
+  padding: 0 !important;
+  height: 32px !important;
+  font-size: 13px;
+}
+
+/* Remove inner padding from dropdown items */
+::ng-deep .p-dropdown-items .p-dropdown-item {
+  padding: 4px 3px !important;
+  font-size: 13px;
+}
+
+/* === Entire Paginator Row === */
+::ng-deep .p-paginator {
+  padding: 0 !important;
+  margin-top: 10px;
+  border: none;
+}
+
+/* Optional: reduce table row padding */
+::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+  padding: 6px 5px !important;
+  font-size: 14px;
+}
+

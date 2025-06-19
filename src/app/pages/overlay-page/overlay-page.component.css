@@ -1,0 +1,32 @@
+::ng-deep .custom-drawer .p-sidebar {
+  padding: 1.5rem;
+  width: 300px;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+::ng-deep .p-dialog .p-dialog-content {
+  font-size: 14px;
+  line-height: 1.6;
+}
+ ::ng-deep .p-button .pi {
+  font-size: 7x; 
+}
+::ng-deep .icon-btn-sm .pi {
+  font-size: 14px;
+}
+::ng-deep .custom-icon-button .p-button-label {
+  margin: 0 auto;         /* Center text */
+  flex: 1;                /* Expand label to fill available space */
+  text-align: center;
+}
+
+::ng-deep .custom-icon-button .pi {
+  margin-left: 0.5rem;  
+  font-size: 13px;
+  margin-right: 0 !important;
+}
+input{
+    height: 30px;
+    margin-right: 0 !important;
+}
