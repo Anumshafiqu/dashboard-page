@@ -145,4 +145,17 @@
 
         </p-card>
     </div>
+
+    <div class="col-6">
+        <p-card>
+            <div class="">
+                <p-toast></p-toast>
+                <p-confirmPopup></p-confirmPopup>
+                <p class="fw-medium ">ConfirmDialog</p>
+
+                <p-button type="button" pButton icon="pi pi-trash" label="Delete" severity="danger"
+                    (onClick)="confirmDelete($event)" class="custom-delete-btn w-6rem"></p-button>
+            </div>
+        </p-card>
+    </div>
 </div>

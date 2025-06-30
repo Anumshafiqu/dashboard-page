@@ -1,0 +1,173 @@
+<div class="p-grid row mx-2 mt-5">
+
+    <!-- Left and Right Aligned Timelines -->
+    <div class="col-6 mt-5">
+        <p-card>
+            <p-timeline [value]="events" align="left" styleClass="custom-timeline" class="custom-timeline">
+
+                <!-- Custom Marker (Dot) -->
+                <ng-template let-event pTemplate="marker">
+                    <span class="custom-marker text-xs">
+                        <i class="text-white text-xs"></i>
+                    </span>
+                </ng-template>
+
+                <!-- Timeline Content -->
+                <ng-template let-event pTemplate="content">
+                    <span class="text-sm">{{ event.status }}</span>
+                </ng-template>
+
+            </p-timeline>
+            <!-- <p-timeline [value]="events" align="left" styleClass="custom-timeline" class="custom-timeline">
+                <ng-template let-event pTemplate="content">
+                    <span class="text-xs">{{ event.status }}</span>
+                </ng-template>
+            </p-timeline> -->
+        </p-card>
+        <div class="mt-5">
+            <p-card>
+                <p-timeline [value]="events" align="alternate" styleClass="custom-timeline">
+                    <!-- Marker (custom small circle) -->
+                    <ng-template let-event pTemplate="marker">
+                        <span class="custom-marker">
+                            <i class="text-white text-xs"></i>
+                        </span>
+                    </ng-template>
+
+                    <!-- Timeline Content -->
+                    <ng-template let-event pTemplate="content">
+                        <div class="custom-content">
+                            <p class="text-sm font-medium">{{ event.status }}</p>
+                            <!-- <small class="text-xs text-gray-500">{{ event.date }}</small> -->
+                        </div>
+                    </ng-template>
+                </p-timeline>
+            </p-card>
+
+        </div>
+    </div>
+
+
+
+    <!-- Alternate & Opposite Content -->
+    <div class="col-6">
+        <div class="mt-5">
+            <p-card>
+                <p-timeline [value]="events" align="right" styleClass="custom-timeline">
+                    <!-- Marker (the dot) -->
+                    <ng-template let-event pTemplate="marker">
+                        <span class="custom-marker">
+                            <i class="text-white text-xs"></i>
+                        </span>
+                    </ng-template>
+
+                    <!-- Content -->
+                    <ng-template let-event pTemplate="content">
+                        <div class="custom-content">
+                            <p class="text-xs font-medium">{{ event.status }}</p>
+                            <!-- <small class="text-xs text-gray-500">{{ event.date }}</small> -->
+                        </div>
+                    </ng-template>
+                </p-timeline>
+
+            </p-card>
+        </div>
+        <div class="mt-4">
+            <p-card>
+                <p-timeline [value]="events" align="alternate" styleClass="custom-timeline">
+                    <!-- Opposite content (like a date) -->
+                    <ng-template let-event pTemplate="opposite">
+                        <span class="text-xs text-gray-500">{{ event.date }}</span>
+                    </ng-template>
+
+                    <!-- Custom marker (circle dot) -->
+                    <ng-template let-event pTemplate="marker">
+                        <span class="custom-marker">
+                            <i class="text-white text-xs"></i>
+                        </span>
+                    </ng-template>
+
+                    <!-- Main content (status) -->
+                    <ng-template let-event pTemplate="content">
+                        <div class="custom-content">
+                            <p class="text-sm font-medium">{{ event.status }}</p>
+                        </div>
+                    </ng-template>
+                </p-timeline>
+
+            </p-card>
+        </div>
+    </div>
+
+
+
+    <!-- Custom Templating -->
+    <div class="col-12">
+        <p-card header="Templating">
+            <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
+                <!-- Marker Template -->
+                <ng-template let-event pTemplate="marker">
+                    <span class="custom-marker-icon" [ngStyle]="{ 'background-color': event.color }">
+                        <i [class]="event.icon"></i>
+                    </span>
+                </ng-template>
+
+                <!-- Content Template -->
+                <ng-template let-event pTemplate="content">
+                    <p-card styleClass="timeline-card shadow-1">
+                        <p class="fw-semibold mb-0">{{event.status}}</p>
+                        <p class="fw-medium small">{{event.date}}</p>
+                        <img *ngIf="event.image"
+                            [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image"
+                            [alt]="event.status" class="timeline-img mb-2" width="100%" />
+                        <p class="text-sm">
+                            {{ event.description || 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.' }}
+                        </p>
+                        <p-button label="Read more" [text]="true" class="p-0 text-sm text-success mt-2 mb-0" />
+                    </p-card>
+                </ng-template>
+            </p-timeline>
+        </p-card>
+
+
+    </div>
+
+<p-card>
+    <div class="">
+  <!-- Top Align Timeline -->
+   <p class="fw-semibold mt-0">Horizontal</p>
+   <p class="fw-semibold text-sm m-0">Top Align</p>
+  <p-timeline [value]="events1" layout="horizontal" align="top" class="custom-timeline">
+    <ng-template let-event pTemplate="content">
+      <div class="year-label">{{ event }}</div>
+    </ng-template>
+  </p-timeline>
+<p class="fw-semibold text-sm m-0">Bottom Align</p>
+  <!-- Bottom Align Timeline -->
+  <p-timeline [value]="events1" layout="horizontal" align="bottom" class="custom-timeline">
+    <ng-template let-event pTemplate="content">
+      <div class="year-label">{{ event }}</div>
+    </ng-template>
+  </p-timeline>
+ <p class="fw-semibold text-sm m-0">Alternate Align</p>
+  <!-- Alternate Align Timeline -->
+  <p-timeline [value]="events1" layout="horizontal" align="alternate" class="custom-timeline">
+    <ng-template let-event pTemplate="content">
+      <div class="year-label">{{ event }}</div>
+    </ng-template>
+    <ng-template let-event pTemplate="opposite">
+      <span>&nbsp;</span>
+    </ng-template>
+  </p-timeline>
+</div>
+
+</p-card>
+
+
+
+
+
+
+
+
+</div>

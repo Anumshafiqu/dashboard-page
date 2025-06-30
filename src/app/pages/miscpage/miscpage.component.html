@@ -1,0 +1,184 @@
+<div class="p-grid row mx-2 mt-5">
+    <div class="col-12 mt-5 px-2">
+        <p-card header="">
+            <div class="flex flex-column gap-2">
+                <div class="d-flex mx-3">
+                    <p-progressBar [value]="100" styleClass="p-progressbar-success"
+                        class="w-50 p-0 mx-2 custom-progressbar "></p-progressBar>
+                    <p-progressBar [value]="70" styleClass="p-progressbar-success"
+                        class="w-50 p-0 custom-progressbar "></p-progressBar>
+                </div>
+            </div>
+        </p-card>
+    </div>
+    <!-- Left Side -->
+    <div class="col-6 mt-1">
+        <p-card header="Badge">
+            <p class="text-sm fw-medium fs-6 my-0 py-1">Badge</p>
+            <div class="flex align-items-center gap-2 mb-3">
+                <p-badge value="2" severity="success"></p-badge>
+                <p-badge value="8" severity="info"></p-badge>
+                <p-badge value="4" severity="warning"></p-badge>
+                <p-badge value="12" severity="danger"></p-badge>
+                <p-badge value="3"></p-badge>
+            </div>
+            <p class="text-sm fw-medium fs-6 my-0 py-1">Overlay</p>
+            <div class="flex align-items-center gap-4 mb-3">
+                <span class="pi pi-calendar p-overlay-badge icon-with-badge font-xs mt-4 fs-6">
+                    <p-badge value="2" severity="success" class="icon-with-badge"></p-badge>
+                </span>
+                <span class="pi pi-envelope p-overlay-badge icon-with-badge mt-4 fs-6">
+                    <p-badge value="2" severity="danger" class="icon-with-badge"></p-badge>
+                </span>
+                <span class="pi pi-bell p-overlay-badge icon-with-badge mt-4 fs-6">
+
+                </span>
+            </div>
+            <p class="text-sm fw-medium fs-6 my-0 py-1">Button</p>
+            <div class="mb-3">
+                <p-button label="Emails" severity="success" badge="8" class="left-badge-button w-6rem"></p-button>
+                <p-button label="Messages" severity="warning" badge="8"
+                    class="left-badge-button w-7rem px-1 mx-2"></p-button>
+            </div>
+            <p class="text-xs fw-bold fs-6 my-0 py-1">Sizes</p>
+            <div class="flex align-items-center gap-2">
+                <p-badge value="2" severity="success"></p-badge>
+                <p-badge value="4" severity="warning" class="mt-2"></p-badge>
+                <p-badge value="6" severity="danger" class="mt-3"></p-badge>
+
+            </div>
+        </p-card>
+        <!-- Vertical Grid Card -->
+        <div class="mt-3">
+            <p-card>
+                <p class="fw-semibold">Avatar</p>
+                <p class=" fw-medium text-sm py-0">Group</p>
+                <div class="mb-3 flex justify-content-start">
+                    <p-avatarGroup>
+                        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+                            shape="circle" class="mr-2" />
+
+                        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/asiyajavayant.png"
+                            shape="circle" class="mr-2" />
+
+                        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/onyamalimba.png"
+                            shape="circle" class="mr-2" />
+
+                        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/ionibowcher.png"
+                            shape="circle" class="mr-2" />
+
+                        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png"
+                            shape="circle" class="mr-2" />
+
+                        <p-avatar label="+2" shape="circle" class="mr-2" />
+                    </p-avatarGroup>
+                </div>
+
+                <p class="fw-medium">Label - Circle</p>
+                <div class="flex-auto">
+                    <p-avatar label="P" styleClass="mr-2" size="xlarge" shape="circle" />
+                    <p-avatar label="V" styleClass="mr-2" [style]="{ 'background-color': 'blue', color: 'white' }"
+                        size="large" shape="circle" />
+                    <p-avatar label="U" styleClass="mr-2" [style]="{ 'background-color': 'purple', color: 'white' }"
+                        shape="circle" />
+                </div>
+            </p-card>
+        </div>
+        <div class="mt-3">
+
+            <p-card>
+                <p class="fw-medium">Skeleton</p>
+
+                <div class="card">
+                    <div
+                        class="rounded border border-surface-200 dark:border-surface-700 px-5 py-4 bg-surface-0 dark:bg-surface-900">
+                        <div class="flex mb-4">
+                            <p-skeleton shape="circle" size="4rem" styleClass="mr-2" />
+                            <div>
+                                <p-skeleton width="10rem" styleClass="mb-2" />
+                                <p-skeleton width="5rem" styleClass="mb-2" />
+                                <p-skeleton height=".5rem" />
+                            </div>
+                        </div>
+                        <p-skeleton width="100%" height="150px" />
+                        <div class="flex justify-between mt-4">
+                            <p-skeleton width="4rem" height="2rem" />
+                            <p-skeleton width="4rem" height="2rem" class="mx-2" />
+                        </div>
+                    </div>
+                </div>
+            </p-card>
+        </div>
+    </div>
+    <!-- Right Side -->
+    <div class="col-6 mt-1">
+        <p-card header="Tag">
+            <p class="text-xs fw-bold fs-6 my-0 py-1">Default</p>
+            <div class="flex gap-2 mb-3">
+                <p-tag value="Primary"></p-tag>
+                <p-tag value="Success" severity="success"></p-tag>
+                <p-tag value="Info" severity="info"></p-tag>
+                <p-tag value="Warning" severity="warning"></p-tag>
+                <p-tag value="Danger" severity="danger"></p-tag>
+            </div>
+            <p class="text-xs fw-bold fs-6 my-0 py-1">Pills</p>
+            <div class="flex gap-2 mb-3">
+                <p-tag value="Primary" rounded class="text-xs"></p-tag>
+                <p-tag value="Success" severity="success" rounded></p-tag>
+                <p-tag value="Info" severity="info" rounded></p-tag>
+                <p-tag value="Warning" severity="warning" rounded></p-tag>
+                <p-tag value="Danger" severity="danger" rounded></p-tag>
+            </div>
+            <p class="text-xs fw-bold fs-6 my-0 py-1">Icon</p>
+            <div class="flex gap-2">
+                <p-tag icon="pi pi-check" value="Primary"></p-tag>
+                <p-tag icon="pi pi-check" value="Success" severity="success"></p-tag>
+                <p-tag icon="pi pi-info-circle" value="Info" severity="info"></p-tag>
+                <p-tag icon="pi pi-exclamation-triangle" value="Warning" severity="warning"></p-tag>
+                <p-tag icon="pi pi-times" value="Danger" severity="danger"></p-tag>
+            </div>
+        </p-card>
+        <!-- Inline Card -->
+        <div class="mt-3">
+            <p-card>
+                <p class="fw-semibold">Chip</p>
+                <p class="fw-medium text-sm">Basic</p>
+                <div class="chip-section">
+                    <!-- Category Chips -->
+                    <div class="chip-row">
+                        <p-chip label="Action" class="text-xs mx-1"></p-chip>
+                        <p-chip label="Comedy" class="text-xs mx-1"></p-chip>
+                        <p-chip label="Mystery" class="text-xs mx-1"></p-chip>
+                        <p-chip label="Thriller" [removable]="true" class="text-xs mx-1"></p-chip>
+                    </div>
+                    <p class="fw-medium text-sm mt-2">Icon</p>
+
+                    <!-- Icon Chips -->
+                    <div class="chip-row mt-2">
+                        <p-chip label="Apple" icon="pi pi-apple" class="text-xs mx-1"></p-chip>
+                        <p-chip label="Facebook" icon="pi pi-facebook" class="text-xs mx-1"></p-chip>
+                        <p-chip label="Google" icon="pi pi-google" class="text-xs mx-1"></p-chip>
+                        <p-chip label="Microsoft" icon="pi pi-microsoft" [removable]="true"
+                            class="text-xs mx-1"></p-chip>
+                    </div>
+                    <p class="fw-medium text-sm mt-2">Image</p>
+                    <!-- Avatar Chips -->
+                    <div class="chip-row mt-2">
+                        <p-chip label="Amy Elsner"
+                            image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+                            alt="Avatar image" class="text-xs mx-1"></p-chip>
+                        <p-chip label="Asiya Javayant"
+                            image="https://primefaces.org/cdn/primeng/images/demo/avatar/asiyajavayant.png"
+                            class="text-xs mx-1" alt="Avatar image"></p-chip>
+                        <p-chip label="Onyama Limba"
+                            image="https://primefaces.org/cdn/primeng/images/demo/avatar/onyamalimba.png"
+                            class="text-xs mx-1" alt="Avatar image"></p-chip>
+                        <p-chip label="Xuxue Feng"
+                            image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png"
+                            class="text-xs mx-1" alt="Avatar image" [removable]="true"></p-chip>
+                    </div>
+                </div>
+            </p-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,118 @@
+<!-- Menubar -->
+<!-- <div class="card menubar-wrapper mt-6">
+  <p-menubar [model]="items" class="custom-menubar">
+    <ng-template let-item pTemplate="item">
+      <ng-container *ngIf="item.route; else urlRef">
+        <a [routerLink]="item.route" class="p-menubar-item-link custom-link">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+        </a>
+      </ng-container>
+      <ng-template #urlRef>
+        <a *ngIf="item.url; else noLink" [href]="item.url" class="p-menubar-item-link custom-link" target="_blank">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+        </a>
+      </ng-template>
+      <ng-template #noLink>
+        <div class="p-menubar-item-link custom-link">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+          <span *ngIf="item.items" class="pi pi-fw pi-angle-down ml-2"></span>
+        </div>
+      </ng-template>
+    </ng-template>
+  </p-menubar>
+</div>
+
+<div class="card breadcrumb-wrapper flex justify-center mt-4">
+  <p-breadcrumb [model]="items" [home]="home" class="custom-breadcrumb max-w-full" />
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Menubar -->
+<div class="card menubar-wrapper mt-7 mx-2">
+  <h5 class="ml-4 mt-2 mb-0">Menubar</h5>
+  <p-menubar [model]="menuItems" class="custom-menubar mt-1 py-3 px-3">
+    <ng-template let-item pTemplate="item">
+      <ng-container *ngIf="item.route; else urlRef">
+        <a [routerLink]="item.route" class="p-menubar-item-link custom-link px-3">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+        </a>
+      </ng-container>
+      <ng-template #urlRef>
+        <a *ngIf="item.url; else noLink" [href]="item.url" class="p-menubar-item-link custom-link">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+        </a>
+      </ng-template>
+      <ng-template #noLink>
+        <div class="p-menubar-item-link custom-link">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+          <span *ngIf="item.items" class="pi pi-angle-down ml-2"></span>
+        </div>
+      </ng-template>
+    </ng-template>
+  </p-menubar>
+</div>
+
+<!-- Breadcrumb -->
+  <div class="col-12 mx-2">
+ <p-card class="p-0">
+<div class="breadcrumb-wrapper border-0 mx-2">
+ <p>Breadcrumb</p>
+  <p-breadcrumb [model]="breadcrumbItems" [home]="homeItem" class="custom-breadcrumb max-w-full" />
+</div>
+</p-card>
+</div>
+
+<!-- Steps -->
+ <div class="p-grid row mx-2"> 
+  <div class="col-6">
+ <p-card class="p-0">
+<div class="breadcrumb-wrapper">
+  <p class="mt-0">Steps</p>
+  <p-steps [model]="steps" [(activeIndex)]="activeStep" class="w-full p-0"></p-steps>
+</div>
+</p-card>
+</div>
+
+
+<!-- TabMenu -->
+   <div class="col-6">
+ <p-card class="p-0">
+<div class="mt-4">
+  <h5>TabMenu</h5>
+  <p-tabMenu [model]="tabs" [(activeItem)]="activeTab" />
+</div>
+</p-card>
+</div>
+ </div>
+ <div class="p-grid row mx-2"> 
+ <div class="col-4">
+    <p-card>
+<div class="">
+  <p-tieredMenu [model]="menuItems" class="custom-tieredmenu text-xs"></p-tieredMenu>
+</div>
+    </p-card>
+ </div>
+  <div class="col-4">
+    <p-card>
+
+
+    </p-card>
+  </div>
+ </div>

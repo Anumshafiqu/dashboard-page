@@ -1,0 +1,405 @@
+.p-menubar-item-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: #495057;
+  text-decoration: none;
+}
+
+.p-menubar-item-link:hover {
+  background-color: #f0f0f5;
+  border-radius: 0.3rem;
+}
+
+/* Wrapper styling with no padding */
+.menubar-wrapper {
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Menubar base reset */
+/* .custom-menubar {
+  border: none !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  background-color: transparent !important;
+} */
+
+/* ===== Base Card Wrapper ===== */
+.menubar-wrapper {
+  /* padding: 1rem; */
+  /* border-radius: 12px; */
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  box-shadow: none;
+}
+
+/* ===== Menubar Styling ===== */
+/* .custom-menubar {
+  font-size: 14px;
+  border: none !important;
+  background: transparent !important;
+} */
+
+.p-menubar .p-menubar-root-list > .p-menuitem {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none !important;  /* ✅ remove underline */
+  border: none !important;          /* ✅ remove border */
+  color: #334155 !important;
+  font-weight: 500;
+  border-radius: 6px;
+  background: transparent !important;
+}
+
+.custom-link:hover {
+  background-color: #f1f5f9 !important;
+  color: #000 !important;
+}
+
+/* Submenu spacing fix */
+.p-submenu-list {
+  padding-left: 0 !important;
+}
+
+
+/* ❌ REMOVE internal breadcrumb box border */
+::ng-deep .p-breadcrumb {
+  border: none !important;
+  box-shadow: none !important;
+  /* padding: 0.5rem 1rem; */
+  background: transparent !important;
+}
+
+/* ✅ Remove underline and default link styles */
+::ng-deep .p-breadcrumb a {
+  text-decoration: none !important;
+  border: none !important;
+  color: #334155 !important;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* ✅ Prevent blue underline on visited links */
+::ng-deep .p-breadcrumb a:visited {
+  color: #334155 !important;
+  text-decoration: none !important;
+}
+
+/* ✅ Active text (e.g., Wireless) */
+::ng-deep .p-breadcrumb span {
+  color: #64748b;
+}
+
+/* Optional: make breadcrumb arrows lighter */
+::ng-deep .p-breadcrumb .p-menuitem-separator {
+  color: #9ab3d1 !important;
+  margin: 0 0.5rem;
+  font-size: 12px;
+}
+
+/* Card wrapper (outer card) */
+/* .breadcrumb-wrapper {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  box-shadow: none;
+} */
+
+
+/* General Card Wrapper */
+/* .breadcrumb-wrapper, .menubar-wrapper {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: #fff;
+  box-shadow: none;
+} */
+
+/* Menubar Custom */
+.custom-menubar {
+  border: none !important;
+  background-color: transparent !important;
+  font-size: 14px;
+}
+
+.custom-link {
+  display: flex;
+  align-items: center;
+  /* padding: 0.5rem 0.75rem; */
+  text-decoration: none !important;
+  border: none !important;
+  color: #334155 !important;
+  font-weight: 500;
+  border-radius: 6px;
+  padding-bottom: 0;
+}
+
+.custom-link:hover {
+  background-color: #f1f5f9 !important;
+  color: #000 !important;
+}
+
+.p-submenu-list {
+  padding-left: 0 !important;
+}
+
+.p-menuitem {
+  padding: 0.25rem 0.75rem !important;
+}
+
+/* Breadcrumb Custom */
+::ng-deep .p-breadcrumb {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+::ng-deep .p-breadcrumb a {
+  text-decoration: none !important;
+  color: #334155 !important;
+  font-weight: 500;
+}
+
+::ng-deep .p-breadcrumb .pi {
+  font-size: 14px;
+}
+
+::ng-deep .p-breadcrumb .p-menuitem-separator {
+  font-size: 10px;
+  color: #94a3b8;
+  margin: 0 0.5rem;
+}
+
+/* Steps Custom */
+::ng-deep .p-steps-item .p-menuitem-link {
+  text-decoration: none !important;
+  border: none !important;
+  background: transparent !important;
+  font-size: 14px;
+  color: #334155;
+}
+
+::ng-deep .p-steps-item.p-highlight .p-menuitem-link {
+  color: #22c55e !important;
+}
+
+/* TabMenu Custom */
+::ng-deep .p-tabmenu-nav .p-tabmenuitem a {
+  text-decoration: none !important;
+  border: none !important;
+  color: #334155 !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+::ng-deep .p-tabmenu-nav .p-tabmenuitem.p-highlight a {
+  border-bottom: 2px solid #22c55e !important;
+  color: #22c55e !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Card Styling (consistent padding) ===== */
+.breadcrumb-wrapper, .menubar-wrapper {
+  padding: 0 !important;
+
+}
+
+/* ===== Menubar Compact Size ===== */
+/* .custom-menubar {
+  font-size: 13px;
+  border: none !important;
+  background-color: transparent !important;
+} */
+
+.custom-link {
+  display: flex;
+  align-items: center;
+  padding: 0.35rem 0.65rem !important; 
+  font-size: 13px;
+  text-decoration: none !important;
+  border: none !important;
+  color: #334155 !important;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.custom-link:hover {
+  background-color: #f1f5f9 !important;
+  color: #000 !important;
+}
+
+/* Reduce submenu paddings */
+.p-submenu-list {
+  padding-left: 0 !important;
+}
+
+.p-menuitem {
+  padding: 0.35rem 0.75rem !important;
+  font-size: 13px;
+}
+
+/* ===== PrimeIcons (Menu, Breadcrumb, Steps) ===== */
+::ng-deep .pi {
+  font-size: 0.8rem !important; /* globally shrink icon size */
+}
+
+/* ===== Breadcrumb Specific Fixes ===== */
+::ng-deep .p-breadcrumb {
+  padding: 0.35rem 0.5rem !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+::ng-deep .p-breadcrumb a {
+  text-decoration: none !important;
+  font-size: 13px !important;
+  color: #334155 !important;
+}
+
+::ng-deep .p-breadcrumb .p-menuitem-separator {
+  font-size: 0.7rem !important; /* smaller arrow */
+  color: #94a3b8;
+  margin: 0 0.35rem;
+}
+
+::ng-deep .p-breadcrumb .pi-home {
+  font-size: 0.9rem !important;
+}
+
+/* ===== Steps Component ===== */
+::ng-deep .p-steps-item .p-menuitem-link {
+  font-size: 13px !important;
+}
+
+::ng-deep .p-steps .p-steps-number {
+  font-size: 13px !important;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+/* ===== TabMenu ===== */
+::ng-deep .p-tabmenu .p-tabmenu-nav .p-tabmenuitem a {
+  font-size: 13px !important;
+  /* padding: 0.5rem 1rem !important; */
+  border: none;
+}
+
+
+/* Card base (no padding if needed) */
+.card {
+  padding: 0 !important; /* zero padding */
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+/* TieredMenu root style */
+::ng-deep .custom-tieredmenu.p-tieredmenu {
+  padding: 0 !important;      /* remove inner spacing */
+  border: 1px solid #d1d5db;  /* visible border */
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* Menu item links */
+::ng-deep .p-tieredmenu .p-menuitem-link {
+  padding: 8px 7px !important;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #334155;
+}
+
+/* Hover state */
+::ng-deep .p-tieredmenu .p-menuitem-link:hover {
+  background-color: #f1f5f9;
+  color: #000;
+}
+
+/* Icon sizing */
+::ng-deep .p-tieredmenu .pi {
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+::ng-deep .custom-tieredmenu.p-tieredmenu {
+  font-size: 13px !important; /* or adjust to 12px, 14px as needed */
+}
+
+/* Ensure menu items inherit it properly */
+::ng-deep .custom-tieredmenu .p-menuitem-link {
+  font-size: 13px !important;
+  /* padding: 0.5rem 0.75rem !important; */
+  color: #334155 !important;
+  font-weight: 500;
+}
+
+
+
+
+
+/* Wrapper card */
+.menubar-wrapper {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+/* Menubar style */
+.custom-menubar {
+  font-size: 13px;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+/* Link styling */
+.custom-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  font-size: 13px;
+  text-decoration: none !important;
+  border: none !important;
+  color: #334155 !important;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.custom-link:hover {
+  background-color: #f1f5f9 !important;
+  color: #000 !important;
+}
+
+/* Icon sizing */
+::ng-deep .custom-menubar .pi {
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+

@@ -12,6 +12,11 @@ import { TreetableComponent } from './pages/treetable/treetable.component';
 import { PanelpgaeComponent } from './pages/panelpgae/panelpgae.component';
 import { MediaComponent } from './pages/media/media.component';
 import { OverlayPageComponent } from './pages/overlay-page/overlay-page.component';
+import { MiscpageComponent } from './pages/miscpage/miscpage.component';
+import { LinePagesComponent } from './pages/line-pages/line-pages.component';
+import { FilepageComponent } from './pages/filepage/filepage.component';
+import { MessagePageComponent } from './pages/message-page/message-page.component';
+import { MenuComponent } from './pages/menu/menu.component';
 
 export const routes: Routes = [
     {path : '', component : MainComponent , children :[
@@ -27,7 +32,12 @@ export const routes: Routes = [
         {path : 'treetable' , component : TreetableComponent},
         {path : 'panelpgae' , component : PanelpgaeComponent},
         {path : 'media' , component : MediaComponent},
-        {path : 'overlay-page' , component : OverlayPageComponent}
+        {path : 'overlay-page' , component : OverlayPageComponent},
+        {path : 'miscpage' , component : MiscpageComponent},
+        {path : 'line-pages' , component : LinePagesComponent},
+        {path : 'filepage' , component : FilepageComponent},
+        {path :'message-page' , component : MessagePageComponent},
+        {path : 'menu', component : MenuComponent}
 
 
         

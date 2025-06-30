@@ -1,0 +1,97 @@
+<div class="p-grid p-4 row" style="background-color: #f6f9fc;">
+    <!-- Left Column -->
+    <div class="col-6 mt-5">
+        <div class="p-card p-3 shadow-sm">
+            <p class="fw-medium ml-2">Toast</p>
+            <div class="d-flex flex-row justify-center gap-2">
+                <p-toast />
+                <p-button type="button" pRipple (click)="showSuccess()" label="Success" severity="success"
+                    styleClass="btn-small" />
+                <p-button type="button" pRipple (click)="showInfo()" label="Info" severity="info"
+                    styleClass="btn-small" />
+                <p-button type="button" pRipple (click)="showSecondary()" label="Secondary" severity="warning"
+                    styleClass="btn-small" />
+                <p-button type="button" pRipple (click)="showError()" label="Error" severity="danger"
+                    styleClass="btn-small" />
+            </div>
+
+            <p class="fw-medium ml-2 mt-3">Inline</p>
+            <div class="p-fluid">
+                <div class="">
+                    <div class="mx-2">
+
+                        <!-- Username Input with Inline Error -->
+                        <div class="">
+                            <input pInputText placeholder="Username" aria-label="username"
+                                class="ng-invalid ng-dirty p-1 text-xs fw-medium " />
+                            <p class="text-danger text-xs fw-medium">Username is required</p>
+                        </div>
+
+                        <!-- Email Input with Inline Error -->
+                        <div class="">
+                            <input pInputText placeholder="Email" aria-label="email"
+                                class="ng-invalid ng-dirty p-1 text-xs text-danger fw-medium" />
+                            <p class="text-danger text-xs fw-medium">Email is required</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-6 mt-5">
+        <p class="fw-medium">Message</p>
+        <p-card>
+            <div class="">
+  <!-- Success -->
+  <div class="p-message p-message-success custom-message full-width">
+    <div class="p-message-wrapper">
+      <span class="p-message-text">Success Message</span>
+    </div>
+  </div>
+
+  <!-- Info -->
+  <div class="p-message p-message-info custom-message full-width">
+    <div class="p-message-wrapper">
+      <span class="p-message-text">Info Message</span>
+    </div>
+  </div>
+
+  <!-- Warn -->
+  <div class="p-message p-message-warn custom-message full-width">
+    <div class="p-message-wrapper">
+      <span class="p-message-text">Warning Message</span>
+    </div>
+  </div>
+
+  <!-- Error -->
+  <div class="p-message p-message-error custom-message full-width">
+    <div class="p-message-wrapper">
+      <span class="p-message-text">Error Message</span>
+    </div>
+  </div>
+
+  <!-- Secondary -->
+  <div class="p-message p-message-secondary custom-message full-width">
+    <div class="p-message-wrapper">
+      <span class="p-message-text">Secondary Message</span>
+    </div>
+  </div>
+
+  <!-- Contrast -->
+  <div class="p-message custom-contrast custom-message full-width">
+    <div class="p-message-wrapper">
+      <span class="p-message-text"><strong>Contrast Message</strong></span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+        </p-card>
+    </div>
+</div>

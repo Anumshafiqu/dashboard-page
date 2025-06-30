@@ -1,0 +1,77 @@
+:host ::ng-deep .p-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+.custom-container {
+  background-color: #f4f8fc;
+}
+
+::ng-deep .p-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.icon-with-badge {
+  font-size: 5px;
+  /* position: relative; */
+}
+
+::ng-deep .icon-with-badge .p-badge {
+  /* position: absolute; */
+  /* top: -0.75rem;
+  right: -0.5rem; */
+  font-size: 10px;
+}
+::ng-deep .custom-progressbar .p-progressbar-value {
+  padding: 0.5rem 1rem; /* Top/Bottom and Left/Right padding */
+  font-size: 10px;
+  color: #fff;
+}
+
+::ng-deep .custom-progressbar .p-progressbar {
+  height: 15px; /* Adjust height if needed */
+}
+
+::ng-deep .custom-progressbar {
+  border-radius: 8px;
+}
+::ng-deep .custom-button .p-button {
+  width: 6rem;
+  height: 2rem;
+  padding: 0 !important;
+  border-radius: 12px; /* Or use 9999px for full pill shape */
+  font-size: 12px;
+}
+
+/* ::ng-deep .custom-button .p-button-label {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+} */
+
+::ng-deep .custom-button .p-button-icon {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+::ng-deep .left-badge-button .p-button {
+  height: 2rem;
+  padding: 6px !important;
+  border-radius: 8px;
+  font-size: 11px;
+}
+::ng-deep .left-badge-button .p-badge {
+  top: 0.1rem;
+  font-size: 10px;
+}
+
+::ng-deep .left-badge-button .p-badge.p-component {
+  font-size: 0.7rem;
+  height: auto;
+}
+
+.chip-row ::ng-deep .p-chip {
+  font-size: 0.75rem !important; 
+}
+
+
+

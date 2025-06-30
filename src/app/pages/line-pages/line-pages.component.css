@@ -1,0 +1,97 @@
+.custom-timeline .p-timeline-event-marker {
+  background-color: #10b981 !important;
+  width: 13px;
+  height: 12px;
+  font-size: 10px;
+}
+
+.custom-marker {
+  background-color: #8b5cf6;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-card {
+  max-width: 320px;
+}
+
+.p-timeline-event-content {
+  text-align: left;
+}
+.custom-marker {
+    width: 5px;
+    height: 10px;
+    background-color: #10b981; /* Green */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 2px #e5e7eb; /* optional border */
+}
+.dot-only-marker {
+    width: 5px;
+    height: 5px;
+    background-color: #0ea5e9; /* blue */
+    border-radius: 50%;
+    display: block;
+}
+
+.custom-timeline .p-timeline-event-opposite {
+    flex: 0 !important; /* Hide opposite side for right align */
+}
+.custom-marker-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0 0 0 3px #e0e0e0;
+    z-index: 1;
+}
+
+.timeline-card {
+    border-radius: 0.75rem;
+    padding: 1rem;
+    font-size: 5px !important;
+}
+
+.timeline-img {
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+/* Timeline card */
+.timeline-card {
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 10px; /* equivalent to text-sm */
+}
+
+::ng-deep .p-card .p-card-header {
+  font-size: 0.875rem !important; /* like text-sm */
+  font-weight: 500;
+  padding-bottom: 0.25rem;
+}
+
+::ng-deep .p-card .p-card-subtitle {
+  font-size: 0.75rem !important; /* like text-xs */
+  color: #6c757d;
+  margin-top: -0.25rem;
+}
+.custom-timeline .year-label {
+  font-size: 12px;        /* Larger font size */
+  font-weight: 500; 
+  border-radius: 6px;       /* Rounded corners */
+  min-width: 60px;          /* Minimum width */
+}
+
+
+
+
+
