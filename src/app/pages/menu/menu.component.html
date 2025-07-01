@@ -70,49 +70,98 @@
 </div>
 
 <!-- Breadcrumb -->
-  <div class="col-12 mx-2">
- <p-card class="p-0">
-<div class="breadcrumb-wrapper border-0 mx-2">
- <p>Breadcrumb</p>
-  <p-breadcrumb [model]="breadcrumbItems" [home]="homeItem" class="custom-breadcrumb max-w-full" />
-</div>
-</p-card>
+<div class="col-12 mx-2">
+  <p-card class="p-0">
+    <div class="breadcrumb-wrapper border-0 mx-2">
+      <p>Breadcrumb</p>
+      <p-breadcrumb [model]="breadcrumbItems" [home]="homeItem" class="custom-breadcrumb max-w-full" />
+    </div>
+  </p-card>
 </div>
 
 <!-- Steps -->
- <div class="p-grid row mx-2"> 
+<div class="p-grid row mx-2">
   <div class="col-6">
- <p-card class="p-0">
-<div class="breadcrumb-wrapper">
-  <p class="mt-0">Steps</p>
-  <p-steps [model]="steps" [(activeIndex)]="activeStep" class="w-full p-0"></p-steps>
-</div>
-</p-card>
-</div>
-
-
-<!-- TabMenu -->
-   <div class="col-6">
- <p-card class="p-0">
-<div class="mt-4">
-  <h5>TabMenu</h5>
-  <p-tabMenu [model]="tabs" [(activeItem)]="activeTab" />
-</div>
-</p-card>
-</div>
- </div>
- <div class="p-grid row mx-2"> 
- <div class="col-4">
-    <p-card>
-<div class="">
-  <p-tieredMenu [model]="menuItems" class="custom-tieredmenu text-xs"></p-tieredMenu>
-</div>
+    <p-card class="p-0">
+      <div class="breadcrumb-wrapper">
+        <p class="mt-0">Steps</p>
+        <p-steps [model]="steps" [(activeIndex)]="activeStep" class="w-full p-0"></p-steps>
+      </div>
     </p-card>
- </div>
+  </div>
+
+
+  <!-- TabMenu -->
+  <div class="col-6">
+    <p-card class="p-0">
+      <div class="mt-4">
+        <h5>TabMenu</h5>
+        <p-tabMenu [model]="tabs" [(activeItem)]="activeTab" />
+      </div>
+    </p-card>
+  </div>
+</div>
+<div class="p-grid row mx-2">
+  <div class="col-4">
+    <p-card class="p-0">
+      <p class="fw-semibold text-sm p-0 my-1">Tiered Menu</p>
+      <div class="">
+        <p-tieredMenu [model]="menuItems" class="custom-tieredmenu text-xs"></p-tieredMenu>
+      </div>
+    </p-card>
+  </div>
   <div class="col-4">
     <p-card>
-
+      <p class="fw-semibold text-sm mt-0">Plain menu</p>
+      <div class="border p-3 rounded">
+        <p class="fw-medium text-sm mb-1">Customers</p>
+        <span class="fw-medium text-xs">
+          <i class="pi pi-plus fw-medium px-1"></i> New
+        </span><br>
+        <span class="fw-medium text-xs">
+          <i class="pi pi-file-edit fw-medium px-1"></i> edit
+        </span>
+        <p class="fw-medium text-sm my-2">Orders</p>
+        <span class="fw-medium text-xs">
+          <i class="pi pi-list fw-medium px-1"></i> View
+        </span><br>
+        <span class="fw-medium text-xs">
+          <i class="pi pi-search fw-medium px-1"></i> Search
+        </span>
+      </div>
 
     </p-card>
   </div>
- </div>
+  <div class="col-4">
+    <p-card class="mb-3">
+      <p class="fw-semibold text-sm">Overlay Menu</p>
+      <div>
+        <p-button label="Toggle" (click)="menu.toggle($event)" />
+        <p-tieredMenu #menu [model]="items" [popup]="true" class="text-xs" />
+      </div>
+
+    </p-card>
+    <br>
+    <p-card class="mt-2">
+      <p class="fw-semibold text-sm">Context Menu</p>
+      <div style="border-bottom: 0; text-decoration: none;">
+        <p class="mb-0 fw-medium text text-xs">Right click anywhere to display</p>
+        <p-contextMenu [model]="items" [global]="true"></p-contextMenu>
+      </div>
+    </p-card>
+  </div>
+</div>
+<div class="p-grid row mx-2">
+  <div class="col-6">
+<p-card>
+  <p class="fw-semibold text-sm">MegaMenu | Horizontal</p>
+<div class="border p-2 rounded">
+  <p-megaMenu [model]="menuData"></p-megaMenu>
+</div>
+<p class="fw-semibold text-sm mt-3">MegaMenu | Vertical</p>
+<div class="border p-2 rounded w-50 mt-3">
+  <p-megaMenu [model]="menuData" orientation="vertical"></p-megaMenu>
+</div>
+</p-card>
+  </div>
+</div>

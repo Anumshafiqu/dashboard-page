@@ -401,5 +401,179 @@
   font-size: 0.85rem;
   margin-right: 0.5rem;
 }
+/* Remove padding from the button */
+::ng-deep .p-button {
+  padding: 0.25rem 0.5rem !important;  /* smaller padding, adjust as needed */
+  border-radius: 0.5rem !important;    /* rounded corners */
+  font-size: 14px !important;
+  font-family: Arial, sans-serif;
+  border-radius: 8px !important;
+}
+
+/* Remove extra padding inside button label span */
+::ng-deep .p-button .p-button-label {
+  line-height: 1.2;
+}
+/* Remove padding and style the dropdown button */
+::ng-deep .p-dropdown {
+  border-radius: 0.5rem !important;
+  font-size: 14px !important;
+  font-family: Arial, sans-serif !important;
+  border: 1px solid #ccc !important;
+}
+
+/* Remove padding inside the dropdown label (the button text) */
+::ng-deep .p-dropdown-label {
+  padding: 0 0.5rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Remove padding and border from the dropdown panel (popup list) */
+::ng-deep .p-dropdown-panel {
+  border-radius: 0.5rem !important;
+  border: 1px solid #ccc !important;
+  box-shadow: none !important;
+}
+
+/* Remove padding inside the dropdown items list */
+::ng-deep .p-dropdown-items {
+
+    font-size: 12px !important;
+}
+
+/* Reduce padding on each dropdown item */
+::ng-deep .p-dropdown-item {
+  padding: 0.25rem 0.5rem !important;
+  font-size: 12px !important;
+}
+
+/* Optionally style the hover/focus for items */
+::ng-deep .p-dropdown-item.p-highlight {
+  /* background-color: #e0e0e0 !important; */
+  color: #333 !important;
+  font-weight: 600 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Remove all bottom borders and padding in context menu items */
+::ng-deep .p-contextmenu .p-menuitem {
+  border-bottom: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+/* Style the item link */
+::ng-deep .p-contextmenu .p-menuitem-link {
+  padding: 7px !important;
+  font-size: 13px !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Hide separator line between items */
+::ng-deep .p-contextmenu .p-menu-separator {
+  display: none !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+}
+
+/* Optional: hover effect for menu item */
+/* ::ng-deep .p-contextmenu .p-menuitem-link:hover {
+  background-color: #f0f0f0 !important;
+} */
+/* Remove border and padding from the whole MegaMenu */
+::ng-deep .p-megamenu {
+  border: none !important;
+  padding: 0 !important;
+  text-decoration: none !important;
+  font-size: 13px !important;
+  border-radius: 0 !important;
+}
+
+/* Remove padding from top-level menu items */
+::ng-deep .p-megamenu-root-list > .p-menuitem {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Style individual menu links */
+::ng-deep .p-megamenu .p-menuitem-link {
+  padding: 10px !important;
+  text-decoration: none !important;
+  font-size: 12px !important;
+  font-weight: 500;
+  color: #333 !important;
+}
+
+/* Optional: remove bottom border from submenu items */
+::ng-deep .p-megamenu-panel .p-menuitem {
+  border-bottom: none !important;
+}
+/* Remove padding from the entire MegaMenu popup panel */
+::ng-deep .p-megamenu-panel {
+  padding: 0 !important;
+}
+
+/* Remove padding from each column inside the panel */
+::ng-deep .p-megamenu-grid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove padding from submenus inside the columns */
+::ng-deep .p-megamenu-submenu {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove padding from submenu headers */
+::ng-deep .p-megamenu-submenu-header {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 13px !important;
+  font-weight: 600;
+}
+
+/* Remove padding from individual menu items in the dropdown */
+::ng-deep .p-megamenu .p-menuitem-link {
+  padding: 0.5rem 0.2rem !important;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove padding and margin from the panel grid */
+::ng-deep .p-megamenu-grid {
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 0 !important;
+}
+
+
+
+/* Optional: compact submenu header and items */
+
+
+
+
+
+
 
 
