@@ -27,6 +27,7 @@ import { TieredMenuModule } from 'primeng/tieredmenu';
 export class MenuComponent {
   menuItems: MenuItem[] = [];
   breadcrumbItems: MenuItem[] = [];
+   panelItems: MenuItem[] = [];
    menuData: MegaMenuItem[] | undefined;
      items: MenuItem[] | undefined;
   steps: MenuItem[] = [];
@@ -120,7 +121,28 @@ export class MenuComponent {
                 icon: 'pi pi-share-alt',
             }
         ]
-      
+          this.panelItems = [
+      {
+        label: 'Customers',
+        icon: 'pi pi-table',
+        items: [
+          {
+            label: 'New',
+            icon: 'pi pi-user-plus',
+            items: [
+              { label: 'Customer', icon: 'pi pi-plus' },
+              { label: 'Duplicate', icon: 'pi pi-copy' }
+            ]
+          },
+          { label: 'Edit', icon: 'pi pi-user-edit' }
+        ]
+      },
+      { label: 'Orders', icon: 'pi pi-shopping-cart' },
+      { label: 'Shipments', icon: 'pi pi-envelope' },
+      { label: 'Profile', icon: 'pi pi-user' },
+      { label: 'Quit', icon: 'pi pi-sign-out' }
+    ];
+  
         this.menuData = [
       {
         label: 'Furniture',

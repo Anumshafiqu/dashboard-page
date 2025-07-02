@@ -142,13 +142,13 @@
 
     </p-card>
     <br>
-    <p-card class="mt-2">
+    <!-- <p-card class="mt-2">
       <p class="fw-semibold text-sm">Context Menu</p>
       <div style="border-bottom: 0; text-decoration: none;">
         <p class="mb-0 fw-medium text text-xs">Right click anywhere to display</p>
         <p-contextMenu [model]="items" [global]="true"></p-contextMenu>
       </div>
-    </p-card>
+    </p-card> -->
   </div>
 </div>
 <div class="p-grid row mx-2">
@@ -163,5 +163,11 @@
   <p-megaMenu [model]="menuData" orientation="vertical"></p-megaMenu>
 </div>
 </p-card>
+  </div>
+  <div class="col-6">
+<p-card>
+  <p class="fw-bold text-sm">PanelMenu</p>
+  <p-panelMenu [model]="panelItems" [style]="{ width: '100%' }"></p-panelMenu>
+</p-card> 
   </div>
 </div>
