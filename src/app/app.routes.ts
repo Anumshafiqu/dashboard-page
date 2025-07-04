@@ -17,6 +17,12 @@ import { LinePagesComponent } from './pages/line-pages/line-pages.component';
 import { FilepageComponent } from './pages/filepage/filepage.component';
 import { MessagePageComponent } from './pages/message-page/message-page.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { ChartPageComponent } from './pages/chart-page/chart-page.component';
+import { ChartpageComponent } from './pages/chartpage/chartpage.component';
+import { PiechartComponent } from './pages/piechart/piechart.component';
+import { DoughnutComponent } from './pages/doughnut/doughnut.component';
+import { PolarareaComponent } from './pages/polararea/polararea.component';
+import { ChartLineComponent } from './pages/chart-line/chart-line.component';
 
 export const routes: Routes = [
     {path : '', component : MainComponent , children :[
@@ -37,7 +43,12 @@ export const routes: Routes = [
         {path : 'line-pages' , component : LinePagesComponent},
         {path : 'filepage' , component : FilepageComponent},
         {path :'message-page' , component : MessagePageComponent},
-        {path : 'menu', component : MenuComponent}
+        {path : 'menu', component : MenuComponent},
+        {path : 'chart-page', component : ChartPageComponent},
+        {path : 'piechart' , component : PiechartComponent},
+        {path : 'doughnut' , component : DoughnutComponent},
+        {path : 'polararea' , component : PolarareaComponent},
+        {path : 'chart-line', component : ChartLineComponent}
 
 
         

@@ -1,0 +1,34 @@
+<div class="p-grid row mx-2 mt-7">
+    <div class="col-6">
+        <p-card class="chart-wrapper">
+            <div>
+                <p-chart type="line" [data]="data" [options]="options"></p-chart> 
+            </div>
+        </p-card>
+    </div>
+    <div class="col-6">
+    <app-chart-line></app-chart-line>
+    </div>
+
+</div>
+<div class="p-grid row mx-2 mt-2">
+    <div class="col-6">
+        <app-piechart></app-piechart>
+    </div>
+        <div class="col-6">
+            <app-doughnut></app-doughnut>
+    </div>
+</div>
+
+<div class="row p-grid mx-2">
+    <div class="col-6">
+        <app-polararea></app-polararea>
+    </div>
+    <div class="col-6">
+        <app-chart-radar></app-chart-radar>
+
+    </div>
+</div>
+
+
+
