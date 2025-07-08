@@ -23,35 +23,42 @@ import { PiechartComponent } from './pages/piechart/piechart.component';
 import { DoughnutComponent } from './pages/doughnut/doughnut.component';
 import { PolarareaComponent } from './pages/polararea/polararea.component';
 import { ChartLineComponent } from './pages/chart-line/chart-line.component';
+import { CrudComponent } from './pages/crud/crud.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 export const routes: Routes = [
-    {path : '', component : MainComponent , children :[
-        { path: '', component: HomeComponent }, 
-        {path : "home", component : HomeComponent},
-        {path : 'header' , component : HeaderComponent},
-        {path : 'sidebar' , component : SidebarComponent},
-        {path :'formslayout' , component : FormslayoutComponent},
-        {path : 'table' , component : TableComponent},
-        {path : 'button' , component : ButtonComponent},
-        {path :'input' , component : InputComponent},
-        {path :'tree' , component : TreeComponent},
-        {path : 'treetable' , component : TreetableComponent},
-        {path : 'panelpgae' , component : PanelpgaeComponent},
-        {path : 'media' , component : MediaComponent},
-        {path : 'overlay-page' , component : OverlayPageComponent},
-        {path : 'miscpage' , component : MiscpageComponent},
-        {path : 'line-pages' , component : LinePagesComponent},
-        {path : 'filepage' , component : FilepageComponent},
-        {path :'message-page' , component : MessagePageComponent},
-        {path : 'menu', component : MenuComponent},
-        {path : 'chart-page', component : ChartPageComponent},
-        {path : 'piechart' , component : PiechartComponent},
-        {path : 'doughnut' , component : DoughnutComponent},
-        {path : 'polararea' , component : PolarareaComponent},
-        {path : 'chart-line', component : ChartLineComponent}
+    {
+        path: '', component: MainComponent, children: [
+            { path: '', component: HomeComponent },
+            { path: "home", component: HomeComponent },
+            { path: 'header', component: HeaderComponent },
+            { path: 'sidebar', component: SidebarComponent },
+            { path: 'formslayout', component: FormslayoutComponent },
+            { path: 'table', component: TableComponent },
+            { path: 'button', component: ButtonComponent },
+            { path: 'input', component: InputComponent },
+            { path: 'tree', component: TreeComponent },
+            { path: 'treetable', component: TreetableComponent },
+            { path: 'panelpgae', component: PanelpgaeComponent },
+            { path: 'media', component: MediaComponent },
+            { path: 'overlay-page', component: OverlayPageComponent },
+            { path: 'miscpage', component: MiscpageComponent },
+            { path: 'line-pages', component: LinePagesComponent },
+            { path: 'filepage', component: FilepageComponent },
+            { path: 'message-page', component: MessagePageComponent },
+            { path: 'menu', component: MenuComponent },
+            { path: 'chart-page', component: ChartPageComponent },
+            { path: 'piechart', component: PiechartComponent },
+            { path: 'doughnut', component: DoughnutComponent },
+            { path: 'polararea', component: PolarareaComponent },
+            { path: 'chart-line', component: ChartLineComponent },
+            { path: 'crud', component: CrudComponent },
+            {path : 'notfound' , component : NotfoundComponent},
+            { path: '**', redirectTo: 'notfound' }
 
 
-        
-        
-    ]}
+
+
+        ]
+    }
 ];

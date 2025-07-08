@@ -48,12 +48,12 @@
 </div> -->
 
 
-<app-header (toggleSidebar)="toggleSidebar()"></app-header>
+<app-header (toggleSidebar)="toggleSidebar()" *ngIf="!hideLayout"></app-header>
 
 <div style="display: flex; height: 100vh;">
   <div
     [style.width]="isSidebarVisible ? '18rem' : '0'"
-    style=" overflow: hidden; transition: width 0.3s ease;"
+    style=" overflow: hidden; transition: width 0.3s ease;" *ngIf="!hideLayout"
   >
     <p *ngIf="isSidebarVisible" style="padding: 1rem;"><app-sidebar></app-sidebar></p>
   </div>

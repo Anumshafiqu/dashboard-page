@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="col-md-6">
+    <p-card class=" p-4 rounded">
+      <div class="text-center">
+        <div class="text-2xl font-bold mb-2 text-success">404</div>
+        <h2 class="text-3xl font-semibold text-dark mb-2">Not Found</h2>
+        <p class="text-sm text-secondary mb-4">Requested resource is not available.</p>
+
+        <div class="text-left mb-4 ml-5">
+          <div class="d-flex align-items-start gap-3 border-bottom pb-3 mb-3">
+            <i class="pi pi-table p-2 rounded-circle text-success border border-success"></i>
+            <div>
+              <div class="fw-semibold">Frequently Asked Questions</div>
+              <p class="text-sm text-muted">Ultricies mi quis hendrerit dolor.</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start gap-3 border-bottom pb-3 mb-3">
+            <i class="pi pi-question-circle p-2 rounded-circle text-success border border-success"></i>
+            <div>
+              <div class="fw-semibold">Solution Center</div>
+              <p class="text-sm text-muted">Phasellus faucibus scelerisque eleifend.</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start gap-3">
+            <i class="pi pi-lock p-2 rounded-circle text-success border border-success"></i>
+            <div>
+              <div class="fw-semibold">Permission Manager</div>
+              <p class="text-sm text-muted">Accumsan in nisl nisi scelerisque.</p>
+            </div>
+          </div>
+        </div>
+
+        <button
+          pButton
+          label="Go to Dashboard"
+          icon="pi pi-home"
+          class="btn btn-success"
+          (click)="goToDashboard()"> Go to Dashboard
+        </button>
+      </div>
+    </p-card>
+  </div>
+</div>

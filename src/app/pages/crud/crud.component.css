@@ -1,0 +1,182 @@
+.custom-crud-table .p-paginator {
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+.custom-crud-table .p-paginator .p-dropdown {
+  font-size: 0.875rem;
+}
+.custom-crud-table .p-datatable-thead > tr > th {
+  font-size: 0.9rem;
+}
+.custom-crud-table .p-datatable-tbody > tr > td {
+  font-size: 0.9rem;
+}
+/* Global font size and padding */
+::ng-deep .custom-table .p-datatable-tbody > tr > td,
+::ng-deep .custom-table .p-datatable-thead > tr > th {
+  font-size: 0.875rem; /* ~14px */
+  padding: 0.5rem 1rem;
+}
+
+/* Header background color and style */
+::ng-deep .custom-table .p-datatable-thead > tr > th {
+  background-color: #f4f6fa;
+  color: #333;
+  font-weight: 600;
+  border: none;
+}
+
+/* Round corners of table wrapper */
+::ng-deep .custom-table .p-datatable-wrapper {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+/* Row hover effect */
+::ng-deep .custom-table .p-datatable-tbody > tr:hover {
+  background-color: #f0f4ff;
+}
+
+/* Rounded buttons */
+::ng-deep .p-button {
+  border-radius: 8px;
+  font-size: 13px;
+  padding: 5px 8px !important;
+  color: lavender;
+  color: black;
+}
+
+/* Rating stars color */
+::ng-deep .p-rating .pi-star-fill {
+  color: #10b981; /* green */
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------
+   ⭐ Rating Star Customization
+----------------------------- */
+::ng-deep .p-rating {
+  padding: 0 !important;
+  font-size: 10px;
+}
+
+::ng-deep .p-rating .pi {
+  font-size: 6px; /* smaller star icons */
+  margin: 0 2px;
+}
+
+/* Optional: spacing between stars */
+::ng-deep .p-rating .p-rating-item {
+  margin: 0;
+
+}
+
+/* -----------------------------
+   📄 Global Table Font + Padding
+----------------------------- */
+::ng-deep .custom-table .p-datatable-tbody > tr > td,
+::ng-deep .custom-table .p-datatable-thead > tr > th {
+  font-size: 0.85rem; /* adjust for smaller font */
+  padding: 0.5rem 0.75rem;
+}
+
+/* -----------------------------
+   📘 Pagination Controls Styling
+----------------------------- */
+::ng-deep .p-paginator {
+  font-size: 0.85rem !important;
+  padding: 0 !important;
+  border-radius: 0.5rem;
+  background-color: transparent;
+}
+
+::ng-deep .p-paginator .p-paginator-pages .p-paginator-page,
+::ng-deep .p-paginator .p-paginator-first,
+::ng-deep .p-paginator .p-paginator-last,
+::ng-deep .p-paginator .p-paginator-next,
+::ng-deep .p-paginator .p-paginator-prev {
+  border-radius: 50% !important;
+  padding: 0.35rem 0.65rem !important;
+  margin: 0 2px !important;
+}
+
+::ng-deep .p-paginator .p-highlight {
+  background-color: #e0e7ff !important;
+  color: #1d4ed8 !important;
+  font-weight: 600;
+}
+
+/* Remove border & center page controls */
+::ng-deep .p-paginator .p-paginator-page {
+  border: none !important;
+}
+
+/* Optional: align pagination bottom center */
+::ng-deep .p-datatable .p-paginator-bottom {
+  justify-content: center;
+}
+
+/* 🔘 Remove padding and shrink icon buttons */
+::ng-deep .icon-btn .p-button {
+  padding: 0 !important;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: red;
+}
+
+/* 🎯 Optionally reduce icon size */
+::ng-deep .icon-btn .p-button-icon {
+  font-size: 0.9rem;
+}
+::ng-deep .icon-btn1 .p-button {
+  padding: 0 !important;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: green;
+}
+::ng-deep .custom-rating.p-rating {
+  font-size: 0.8rem !important;  /* Smaller size */
+  padding: 0 !important;
+  gap: 2px;
+}
+
+::ng-deep .custom-rating .pi-star,
+::ng-deep .custom-rating .pi-star-fill {
+  font-size: 1rem !important;   /* Control icon size */
+  color: #10b981 !important;    /* Emerald green color */
+}
+::ng-deep .p-datatable thead th {
+  background-color: white !important;
+  color: #000 !important; /* optional: set your preferred text color */
+  font-size: 0.9rem;       /* optional: control font size */
+  padding: 0.5rem !important;
+}
+::ng-deep .custom-table thead tr {
+  background-color: white !important;
+}
+::ng-deep .custom-table thead {
+  background-color: transparent !important;
+}
+
+
+
